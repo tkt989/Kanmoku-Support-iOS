@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FA207F92A80096B23C /* AppDelegate.swift */; };
+		1690D9FD207F92A80096B23C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FC207F92A80096B23C /* ViewController.swift */; };
+		1690DA00207F92A80096B23C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1690D9FE207F92A80096B23C /* Main.storyboard */; };
+		1690DA02207F92A90096B23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1690DA01207F92A90096B23C /* Assets.xcassets */; };
+		1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1690DA03207F92A90096B23C /* LaunchScreen.storyboard */; };
+		1690DA10207F92AA0096B23C /* Kanmoku_SupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690DA0F207F92AA0096B23C /* Kanmoku_SupportTests.swift */; };
+		1690DA1B207F92AA0096B23C /* Kanmoku_SupportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690DA1A207F92AA0096B23C /* Kanmoku_SupportUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1690DA0C207F92AA0096B23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1690D9EF207F92A80096B23C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1690D9F6207F92A80096B23C;
+			remoteInfo = "Kanmoku-Support";
+		};
+		1690DA17207F92AA0096B23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1690D9EF207F92A80096B23C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1690D9F6207F92A80096B23C;
+			remoteInfo = "Kanmoku-Support";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1690D9F7207F92A80096B23C /* Kanmoku-Support.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanmoku-Support.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1690D9FA207F92A80096B23C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1690D9FC207F92A80096B23C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1690D9FF207F92A80096B23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1690DA01207F92A90096B23C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1690DA04207F92A90096B23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1690DA06207F92A90096B23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1690DA0B207F92AA0096B23C /* Kanmoku-SupportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanmoku-SupportTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1690DA0F207F92AA0096B23C /* Kanmoku_SupportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanmoku_SupportTests.swift; sourceTree = "<group>"; };
+		1690DA11207F92AA0096B23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1690DA16207F92AA0096B23C /* Kanmoku-SupportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanmoku-SupportUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1690DA1A207F92AA0096B23C /* Kanmoku_SupportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanmoku_SupportUITests.swift; sourceTree = "<group>"; };
+		1690DA1C207F92AA0096B23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1690D9F4207F92A80096B23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1690DA08207F92AA0096B23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1690DA13207F92AA0096B23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1690D9EE207F92A80096B23C = {
+			isa = PBXGroup;
+			children = (
+				1690D9F9207F92A80096B23C /* Kanmoku-Support */,
+				1690DA0E207F92AA0096B23C /* Kanmoku-SupportTests */,
+				1690DA19207F92AA0096B23C /* Kanmoku-SupportUITests */,
+				1690D9F8207F92A80096B23C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1690D9F8207F92A80096B23C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1690D9F7207F92A80096B23C /* Kanmoku-Support.app */,
+				1690DA0B207F92AA0096B23C /* Kanmoku-SupportTests.xctest */,
+				1690DA16207F92AA0096B23C /* Kanmoku-SupportUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1690D9F9207F92A80096B23C /* Kanmoku-Support */ = {
+			isa = PBXGroup;
+			children = (
+				1690D9FA207F92A80096B23C /* AppDelegate.swift */,
+				1690D9FC207F92A80096B23C /* ViewController.swift */,
+				1690D9FE207F92A80096B23C /* Main.storyboard */,
+				1690DA01207F92A90096B23C /* Assets.xcassets */,
+				1690DA03207F92A90096B23C /* LaunchScreen.storyboard */,
+				1690DA06207F92A90096B23C /* Info.plist */,
+			);
+			path = "Kanmoku-Support";
+			sourceTree = "<group>";
+		};
+		1690DA0E207F92AA0096B23C /* Kanmoku-SupportTests */ = {
+			isa = PBXGroup;
+			children = (
+				1690DA0F207F92AA0096B23C /* Kanmoku_SupportTests.swift */,
+				1690DA11207F92AA0096B23C /* Info.plist */,
+			);
+			path = "Kanmoku-SupportTests";
+			sourceTree = "<group>";
+		};
+		1690DA19207F92AA0096B23C /* Kanmoku-SupportUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1690DA1A207F92AA0096B23C /* Kanmoku_SupportUITests.swift */,
+				1690DA1C207F92AA0096B23C /* Info.plist */,
+			);
+			path = "Kanmoku-SupportUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1690D9F6207F92A80096B23C /* Kanmoku-Support */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1690DA1F207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-Support" */;
+			buildPhases = (
+				1690D9F3207F92A80096B23C /* Sources */,
+				1690D9F4207F92A80096B23C /* Frameworks */,
+				1690D9F5207F92A80096B23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kanmoku-Support";
+			productName = "Kanmoku-Support";
+			productReference = 1690D9F7207F92A80096B23C /* Kanmoku-Support.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1690DA0A207F92AA0096B23C /* Kanmoku-SupportTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1690DA22207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-SupportTests" */;
+			buildPhases = (
+				1690DA07207F92AA0096B23C /* Sources */,
+				1690DA08207F92AA0096B23C /* Frameworks */,
+				1690DA09207F92AA0096B23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1690DA0D207F92AA0096B23C /* PBXTargetDependency */,
+			);
+			name = "Kanmoku-SupportTests";
+			productName = "Kanmoku-SupportTests";
+			productReference = 1690DA0B207F92AA0096B23C /* Kanmoku-SupportTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1690DA15207F92AA0096B23C /* Kanmoku-SupportUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1690DA25207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-SupportUITests" */;
+			buildPhases = (
+				1690DA12207F92AA0096B23C /* Sources */,
+				1690DA13207F92AA0096B23C /* Frameworks */,
+				1690DA14207F92AA0096B23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1690DA18207F92AA0096B23C /* PBXTargetDependency */,
+			);
+			name = "Kanmoku-SupportUITests";
+			productName = "Kanmoku-SupportUITests";
+			productReference = 1690DA16207F92AA0096B23C /* Kanmoku-SupportUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1690D9EF207F92A80096B23C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = tkt989;
+				TargetAttributes = {
+					1690D9F6207F92A80096B23C = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					1690DA0A207F92AA0096B23C = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 1690D9F6207F92A80096B23C;
+					};
+					1690DA15207F92AA0096B23C = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 1690D9F6207F92A80096B23C;
+					};
+				};
+			};
+			buildConfigurationList = 1690D9F2207F92A80096B23C /* Build configuration list for PBXProject "Kanmoku-Support" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1690D9EE207F92A80096B23C;
+			productRefGroup = 1690D9F8207F92A80096B23C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1690D9F6207F92A80096B23C /* Kanmoku-Support */,
+				1690DA0A207F92AA0096B23C /* Kanmoku-SupportTests */,
+				1690DA15207F92AA0096B23C /* Kanmoku-SupportUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1690D9F5207F92A80096B23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */,
+				1690DA02207F92A90096B23C /* Assets.xcassets in Resources */,
+				1690DA00207F92A80096B23C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1690DA09207F92AA0096B23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1690DA14207F92AA0096B23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1690D9F3207F92A80096B23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
+				1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1690DA07207F92AA0096B23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1690DA10207F92AA0096B23C /* Kanmoku_SupportTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1690DA12207F92AA0096B23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1690DA1B207F92AA0096B23C /* Kanmoku_SupportUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1690DA0D207F92AA0096B23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1690D9F6207F92A80096B23C /* Kanmoku-Support */;
+			targetProxy = 1690DA0C207F92AA0096B23C /* PBXContainerItemProxy */;
+		};
+		1690DA18207F92AA0096B23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1690D9F6207F92A80096B23C /* Kanmoku-Support */;
+			targetProxy = 1690DA17207F92AA0096B23C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1690D9FE207F92A80096B23C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1690D9FF207F92A80096B23C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1690DA03207F92A90096B23C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1690DA04207F92A90096B23C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1690DA1D207F92AA0096B23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1690DA1E207F92AA0096B23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1690DA20207F92AA0096B23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZN22MM2MH;
+				INFOPLIST_FILE = "Kanmoku-Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-Support";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1690DA21207F92AA0096B23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZN22MM2MH;
+				INFOPLIST_FILE = "Kanmoku-Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-Support";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1690DA23207F92AA0096B23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZN22MM2MH;
+				INFOPLIST_FILE = "Kanmoku-SupportTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanmoku-Support.app/Kanmoku-Support";
+			};
+			name = Debug;
+		};
+		1690DA24207F92AA0096B23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZN22MM2MH;
+				INFOPLIST_FILE = "Kanmoku-SupportTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanmoku-Support.app/Kanmoku-Support";
+			};
+			name = Release;
+		};
+		1690DA26207F92AA0096B23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZN22MM2MH;
+				INFOPLIST_FILE = "Kanmoku-SupportUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kanmoku-Support";
+			};
+			name = Debug;
+		};
+		1690DA27207F92AA0096B23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZN22MM2MH;
+				INFOPLIST_FILE = "Kanmoku-SupportUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kanmoku-Support";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1690D9F2207F92A80096B23C /* Build configuration list for PBXProject "Kanmoku-Support" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1690DA1D207F92AA0096B23C /* Debug */,
+				1690DA1E207F92AA0096B23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1690DA1F207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-Support" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1690DA20207F92AA0096B23C /* Debug */,
+				1690DA21207F92AA0096B23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1690DA22207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-SupportTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1690DA23207F92AA0096B23C /* Debug */,
+				1690DA24207F92AA0096B23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1690DA25207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-SupportUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1690DA26207F92AA0096B23C /* Debug */,
+				1690DA27207F92AA0096B23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1690D9EF207F92A80096B23C /* Project object */;
+}
