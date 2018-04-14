@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,17 +33,17 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3jd-Bi-Uys">
-                    <rect key="frame" x="16" y="36" width="343" height="569"/>
+                    <rect key="frame" x="37.5" y="36" width="300" height="569"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nOZ-7G-0CY" secondAttribute="bottom" constant="16" id="9Kb-OH-HHj"/>
+                <constraint firstItem="3jd-Bi-Uys" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.8" id="Dgf-F2-FyZ"/>
                 <constraint firstItem="nOZ-7G-0CY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FtU-Lo-QIP"/>
                 <constraint firstItem="3jd-Bi-Uys" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="TbV-GU-PCy"/>
+                <constraint firstItem="3jd-Bi-Uys" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dmT-Fh-ggC"/>
                 <constraint firstItem="nOZ-7G-0CY" firstAttribute="top" secondItem="3jd-Bi-Uys" secondAttribute="bottom" constant="16" id="gq4-K6-ces"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3jd-Bi-Uys" secondAttribute="trailing" constant="16" id="hne-8O-Lde"/>
-                <constraint firstItem="3jd-Bi-Uys" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pzw-Ar-fkw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
