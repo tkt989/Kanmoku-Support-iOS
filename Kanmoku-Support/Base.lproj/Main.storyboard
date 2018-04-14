@@ -37,6 +37,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujo-pT-MFc">
                                         <rect key="frame" x="16" y="17" width="31" height="30"/>
                                         <state key="normal" title="話す"/>
+                                        <connections>
+                                            <action selector="speech:" destination="mbu-gS-jzo" eventType="touchUpInside" id="bqF-7Y-cEQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

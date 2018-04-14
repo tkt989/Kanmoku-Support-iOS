@@ -10,6 +10,7 @@ import UIKit
 
 class WritingViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
+    private var tts: TTS = TTS()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,5 +44,12 @@ class WritingViewController: UIViewController {
         let vc = TextShowViewController()
         vc.text = self.textView.text
         present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func speech(_ sender: UIButton) {
+        sender.isEnabled = false
+        tts.speech(self.textView.text, didFinish: { () -> () in
+            sender.isEnabled = true
+        })
     }
 }

@@ -18,6 +18,7 @@
 		16BE8C252081E7120041602C /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C242081E7120041602C /* WritingViewController.swift */; };
 		16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C262081E9C70041602C /* TextShowViewController.swift */; };
 		16BE8C292081E9C70041602C /* TextShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BE8C272081E9C70041602C /* TextShowViewController.xib */; };
+		16BE8C2C2081F7490041602C /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C2B2081F7490041602C /* TTS.swift */; };
 		5420FAEC9331CEBC66579A99 /* Pods_Kanmoku_SupportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */; };
 		5A6AEAD81DD9B8177971938F /* Pods_Kanmoku_Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383B4C8527131A61DA8192FD /* Pods_Kanmoku_Support.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		16BE8C242081E7120041602C /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		16BE8C262081E9C70041602C /* TextShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShowViewController.swift; sourceTree = "<group>"; };
 		16BE8C272081E9C70041602C /* TextShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextShowViewController.xib; sourceTree = "<group>"; };
+		16BE8C2B2081F7490041602C /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
 		172E7894D134034A4E891C1D /* Pods-Kanmoku-SupportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportTests/Pods-Kanmoku-SupportTests.release.xcconfig"; sourceTree = "<group>"; };
 		261182AE04FDD1D837D0FBFC /* Pods-Kanmoku-SupportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportUITests/Pods-Kanmoku-SupportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 		1690D9F9207F92A80096B23C /* Kanmoku-Support */ = {
 			isa = PBXGroup;
 			children = (
+				16BE8C2A2081F7280041602C /* Model */,
 				16BE8C232081E6E80041602C /* ViewController */,
 				1690D9FA207F92A80096B23C /* AppDelegate.swift */,
 				1690D9FE207F92A80096B23C /* Main.storyboard */,
@@ -157,6 +160,14 @@
 				16BE8C272081E9C70041602C /* TextShowViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		16BE8C2A2081F7280041602C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16BE8C2B2081F7490041602C /* TTS.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2C87997D4B5BE4A48338F0AF /* Pods */ = {
@@ -396,6 +407,7 @@
 				16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */,
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
+				16BE8C2C2081F7490041602C /* TTS.swift in Sources */,
 				1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
