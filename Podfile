@@ -20,3 +20,8 @@ target 'Kanmoku-Support' do
   end
 
 end
+
+post_install do | installer |
+  require 'fileutils'
+  FileUtils.cp_r('Pods/Target Support Files/Pods-Kanmoku-Support/Pods-Kanmoku-Support-Acknowledgements.plist', 'Kanmoku-Support/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end
