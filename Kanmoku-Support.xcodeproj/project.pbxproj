@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00C448A44B21BD6598B1A329 /* Pods_Kanmoku_SupportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */; };
 		1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FA207F92A80096B23C /* AppDelegate.swift */; };
 		1690D9FD207F92A80096B23C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FC207F92A80096B23C /* ViewController.swift */; };
 		1690DA00207F92A80096B23C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1690D9FE207F92A80096B23C /* Main.storyboard */; };
@@ -14,6 +15,11 @@
 		1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1690DA03207F92A90096B23C /* LaunchScreen.storyboard */; };
 		1690DA10207F92AA0096B23C /* Kanmoku_SupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690DA0F207F92AA0096B23C /* Kanmoku_SupportTests.swift */; };
 		1690DA1B207F92AA0096B23C /* Kanmoku_SupportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690DA1A207F92AA0096B23C /* Kanmoku_SupportUITests.swift */; };
+		16BE8C252081E7120041602C /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C242081E7120041602C /* WritingViewController.swift */; };
+		16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C262081E9C70041602C /* TextShowViewController.swift */; };
+		16BE8C292081E9C70041602C /* TextShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BE8C272081E9C70041602C /* TextShowViewController.xib */; };
+		5420FAEC9331CEBC66579A99 /* Pods_Kanmoku_SupportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */; };
+		5A6AEAD81DD9B8177971938F /* Pods_Kanmoku_Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383B4C8527131A61DA8192FD /* Pods_Kanmoku_Support.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1690D9F7207F92A80096B23C /* Kanmoku-Support.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanmoku-Support.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1690D9FA207F92A80096B23C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1690D9FC207F92A80096B23C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,17 @@
 		1690DA16207F92AA0096B23C /* Kanmoku-SupportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanmoku-SupportUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1690DA1A207F92AA0096B23C /* Kanmoku_SupportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanmoku_SupportUITests.swift; sourceTree = "<group>"; };
 		1690DA1C207F92AA0096B23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16BE8C242081E7120041602C /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		16BE8C262081E9C70041602C /* TextShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShowViewController.swift; sourceTree = "<group>"; };
+		16BE8C272081E9C70041602C /* TextShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextShowViewController.xib; sourceTree = "<group>"; };
+		172E7894D134034A4E891C1D /* Pods-Kanmoku-SupportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportTests/Pods-Kanmoku-SupportTests.release.xcconfig"; sourceTree = "<group>"; };
+		261182AE04FDD1D837D0FBFC /* Pods-Kanmoku-SupportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportUITests/Pods-Kanmoku-SupportUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		383B4C8527131A61DA8192FD /* Pods_Kanmoku_Support.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_Support.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		641C85CD28C8D17B31A69042 /* Pods-Kanmoku-SupportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportTests/Pods-Kanmoku-SupportTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E4EBEB1B4C3110A0E261B1A /* Pods-Kanmoku-Support.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-Support.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-Support/Pods-Kanmoku-Support.release.xcconfig"; sourceTree = "<group>"; };
+		DC79B6DAA1E21CD70EC35513 /* Pods-Kanmoku-Support.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-Support.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-Support/Pods-Kanmoku-Support.debug.xcconfig"; sourceTree = "<group>"; };
+		E1900C50D0BFCAAD3587FF5C /* Pods-Kanmoku-SupportUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportUITests/Pods-Kanmoku-SupportUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6AEAD81DD9B8177971938F /* Pods_Kanmoku_Support.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5420FAEC9331CEBC66579A99 /* Pods_Kanmoku_SupportTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C448A44B21BD6598B1A329 /* Pods_Kanmoku_SupportUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,8 @@
 				1690DA0E207F92AA0096B23C /* Kanmoku-SupportTests */,
 				1690DA19207F92AA0096B23C /* Kanmoku-SupportUITests */,
 				1690D9F8207F92A80096B23C /* Products */,
+				2C87997D4B5BE4A48338F0AF /* Pods */,
+				AE98F168B6AF5970E6CE02AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +120,8 @@
 		1690D9F9207F92A80096B23C /* Kanmoku-Support */ = {
 			isa = PBXGroup;
 			children = (
+				16BE8C232081E6E80041602C /* ViewController */,
 				1690D9FA207F92A80096B23C /* AppDelegate.swift */,
-				1690D9FC207F92A80096B23C /* ViewController.swift */,
 				1690D9FE207F92A80096B23C /* Main.storyboard */,
 				1690DA01207F92A90096B23C /* Assets.xcassets */,
 				1690DA03207F92A90096B23C /* LaunchScreen.storyboard */,
@@ -125,6 +148,40 @@
 			path = "Kanmoku-SupportUITests";
 			sourceTree = "<group>";
 		};
+		16BE8C232081E6E80041602C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1690D9FC207F92A80096B23C /* ViewController.swift */,
+				16BE8C242081E7120041602C /* WritingViewController.swift */,
+				16BE8C262081E9C70041602C /* TextShowViewController.swift */,
+				16BE8C272081E9C70041602C /* TextShowViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C87997D4B5BE4A48338F0AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC79B6DAA1E21CD70EC35513 /* Pods-Kanmoku-Support.debug.xcconfig */,
+				7E4EBEB1B4C3110A0E261B1A /* Pods-Kanmoku-Support.release.xcconfig */,
+				641C85CD28C8D17B31A69042 /* Pods-Kanmoku-SupportTests.debug.xcconfig */,
+				172E7894D134034A4E891C1D /* Pods-Kanmoku-SupportTests.release.xcconfig */,
+				261182AE04FDD1D837D0FBFC /* Pods-Kanmoku-SupportUITests.debug.xcconfig */,
+				E1900C50D0BFCAAD3587FF5C /* Pods-Kanmoku-SupportUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE98F168B6AF5970E6CE02AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				383B4C8527131A61DA8192FD /* Pods_Kanmoku_Support.framework */,
+				2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */,
+				0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1690DA1F207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-Support" */;
 			buildPhases = (
+				6A07413D8AAA4869F1EAA7DF /* [CP] Check Pods Manifest.lock */,
 				1690D9F3207F92A80096B23C /* Sources */,
 				1690D9F4207F92A80096B23C /* Frameworks */,
 				1690D9F5207F92A80096B23C /* Resources */,
+				72DE25A560E6D911ABCFB7AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1690DA22207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-SupportTests" */;
 			buildPhases = (
+				276AE46EB870D3E2080B5C62 /* [CP] Check Pods Manifest.lock */,
 				1690DA07207F92AA0096B23C /* Sources */,
 				1690DA08207F92AA0096B23C /* Frameworks */,
 				1690DA09207F92AA0096B23C /* Resources */,
@@ -167,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1690DA25207F92AA0096B23C /* Build configuration list for PBXNativeTarget "Kanmoku-SupportUITests" */;
 			buildPhases = (
+				068938E95D2D382DC6DCFEAE /* [CP] Check Pods Manifest.lock */,
 				1690DA12207F92AA0096B23C /* Sources */,
 				1690DA13207F92AA0096B23C /* Frameworks */,
 				1690DA14207F92AA0096B23C /* Resources */,
@@ -229,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BE8C292081E9C70041602C /* TextShowViewController.xib in Resources */,
 				1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */,
 				1690DA02207F92A90096B23C /* Assets.xcassets in Resources */,
 				1690DA00207F92A80096B23C /* Main.storyboard in Resources */,
@@ -251,12 +313,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		068938E95D2D382DC6DCFEAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kanmoku-SupportUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		276AE46EB870D3E2080B5C62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kanmoku-SupportTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A07413D8AAA4869F1EAA7DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kanmoku-Support-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72DE25A560E6D911ABCFB7AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kanmoku-Support/Pods-Kanmoku-Support-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NXDrawKit/NXDrawKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NXDrawKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kanmoku-Support/Pods-Kanmoku-Support-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1690D9F3207F92A80096B23C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */,
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
+				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
 				1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +567,7 @@
 		};
 		1690DA20207F92AA0096B23C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC79B6DAA1E21CD70EC35513 /* Pods-Kanmoku-Support.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +586,7 @@
 		};
 		1690DA21207F92AA0096B23C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E4EBEB1B4C3110A0E261B1A /* Pods-Kanmoku-Support.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +605,7 @@
 		};
 		1690DA23207F92AA0096B23C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 641C85CD28C8D17B31A69042 /* Pods-Kanmoku-SupportTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +627,7 @@
 		};
 		1690DA24207F92AA0096B23C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172E7894D134034A4E891C1D /* Pods-Kanmoku-SupportTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +649,7 @@
 		};
 		1690DA26207F92AA0096B23C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261182AE04FDD1D837D0FBFC /* Pods-Kanmoku-SupportUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +670,7 @@
 		};
 		1690DA27207F92AA0096B23C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1900C50D0BFCAAD3587FF5C /* Pods-Kanmoku-SupportUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

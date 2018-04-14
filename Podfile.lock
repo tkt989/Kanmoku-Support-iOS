@@ -1,0 +1,16 @@
+PODS:
+  - NXDrawKit (0.6.1)
+
+DEPENDENCIES:
+  - NXDrawKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - NXDrawKit
+
+SPEC CHECKSUMS:
+  NXDrawKit: a287045ea335673d6e1e693d80d44073d8726514
+
+PODFILE CHECKSUM: eb2844ef52b75204a8ef290a91450224ca9536f5
+
+COCOAPODS: 1.5.0
