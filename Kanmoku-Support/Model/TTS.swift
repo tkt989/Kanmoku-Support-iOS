@@ -18,7 +18,7 @@ public class TTS: NSObject, AVSpeechSynthesizerDelegate {
     
     func speech(_ text: String, rate: Float = 1.0, didFinish: @escaping () -> () = { () in return }) {
         let utterance = AVSpeechUtterance(string: text)
-        utterance.rate = AVSpeechUtteranceMinimumSpeechRate * rate
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * rate
         utterance.voice = AVSpeechSynthesisVoice(language: "ja-jp")
         
         self.synth.delegate = self
