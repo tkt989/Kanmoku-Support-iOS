@@ -86,10 +86,54 @@
             </objects>
             <point key="canvasLocation" x="1285.0074962518743" y="-432.80000000000001"/>
         </scene>
-        <!--Illust Select View Controller-->
+        <!--描いて伝える-->
+        <scene sceneID="TqL-Fo-sLl">
+            <objects>
+                <viewController title="描いて伝える" id="wNf-5Z-ZPD" customClass="DrawingViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rsI-ZE-rmd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-1r-WgM">
+                                <rect key="frame" x="313" y="621" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-UB-i2f">
+                                <rect key="frame" x="313" y="621" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FOD-ks-AXq"/>
+                                </constraints>
+                                <state key="normal" title="見せる"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P6o-1r-WgM" firstAttribute="height" secondItem="dgb-UB-i2f" secondAttribute="height" id="2IJ-qE-xdj"/>
+                            <constraint firstItem="P6o-1r-WgM" firstAttribute="width" secondItem="dgb-UB-i2f" secondAttribute="width" id="2Zp-yF-3xH"/>
+                            <constraint firstItem="92f-Pp-ldL" firstAttribute="bottom" secondItem="dgb-UB-i2f" secondAttribute="bottom" constant="16" id="HSv-X1-AKm"/>
+                            <constraint firstItem="92f-Pp-ldL" firstAttribute="trailing" secondItem="dgb-UB-i2f" secondAttribute="trailing" constant="16" id="h1C-hs-Ix8"/>
+                            <constraint firstItem="dgb-UB-i2f" firstAttribute="top" secondItem="P6o-1r-WgM" secondAttribute="top" id="siw-pv-gaS"/>
+                            <constraint firstItem="dgb-UB-i2f" firstAttribute="leading" secondItem="P6o-1r-WgM" secondAttribute="leading" id="vhJ-om-gvz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="92f-Pp-ldL"/>
+                    </view>
+                    <connections>
+                        <outlet property="showButton" destination="dgb-UB-i2f" id="imq-8O-7aP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGo-5m-l0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336.80000000000001" y="277.51124437781112"/>
+        </scene>
+        <!--イラストで伝える-->
         <scene sceneID="lld-54-h0h">
             <objects>
-                <collectionViewController id="6YV-ve-l1I" customClass="IllustSelectViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="イラストで伝える" id="6YV-ve-l1I" customClass="IllustSelectViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9S1-x3-6uF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,9 +195,16 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-kA-22D">
                                 <rect key="frame" x="16" y="110" width="343" height="30"/>
-                                <state key="normal" title="絵で伝える"/>
+                                <state key="normal" title="イラストで伝える"/>
                                 <connections>
                                     <segue destination="6YV-ve-l1I" kind="show" id="7dv-w9-8Xx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiH-zS-TRf">
+                                <rect key="frame" x="16" y="156" width="343" height="30"/>
+                                <state key="normal" title="描いて伝える"/>
+                                <connections>
+                                    <segue destination="wNf-5Z-ZPD" kind="show" id="PnW-8H-qMw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,6 +212,9 @@
                         <constraints>
                             <constraint firstItem="Phu-kA-22D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9WI-Og-AgA"/>
                             <constraint firstItem="ZUE-9S-Vfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DHr-aY-dOi"/>
+                            <constraint firstItem="WiH-zS-TRf" firstAttribute="top" secondItem="Phu-kA-22D" secondAttribute="bottom" constant="16" id="GbN-mg-7rj"/>
+                            <constraint firstItem="WiH-zS-TRf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lyb-4z-L1S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WiH-zS-TRf" secondAttribute="trailing" constant="16" id="Vlf-ZF-D1X"/>
                             <constraint firstItem="Phu-kA-22D" firstAttribute="top" secondItem="ZUE-9S-Vfy" secondAttribute="bottom" constant="16" id="WtY-BA-sJQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUE-9S-Vfy" secondAttribute="trailing" constant="16" id="iLj-hN-Jsy"/>
                             <constraint firstItem="ZUE-9S-Vfy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lF5-H7-dMI"/>
