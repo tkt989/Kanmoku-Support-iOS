@@ -109,6 +109,9 @@
                                     <constraint firstAttribute="height" constant="30" id="FOD-ks-AXq"/>
                                 </constraints>
                                 <state key="normal" title="見せる"/>
+                                <connections>
+                                    <action selector="showDrawing:" destination="wNf-5Z-ZPD" eventType="touchUpInside" id="T3u-HF-M1x"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,9 +125,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="92f-Pp-ldL"/>
                     </view>
-                    <connections>
-                        <outlet property="showButton" destination="dgb-UB-i2f" id="imq-8O-7aP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGo-5m-l0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

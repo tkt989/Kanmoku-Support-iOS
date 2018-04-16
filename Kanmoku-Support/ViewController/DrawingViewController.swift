@@ -11,8 +11,9 @@ import NXDrawKit
 
 class DrawingViewController: UIViewController {
     var canvasView: Canvas!
-
+    var image: UIImage?
     @IBOutlet weak var showButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +32,12 @@ class DrawingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func showDrawing(_ sender: UIButton) {
+        let vc = ShowDrawingViewController()
+        vc.image = image!
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -50,5 +56,11 @@ extension DrawingViewController : CanvasDelegate {
         brush.color = UIColor.black
         brush.width = 10.0
         return brush
+    }
+    
+    func canvas(_ canvas: Canvas, didUpdateDrawing drawing: Drawing, mergedImage image: UIImage?) {
+        if (image != nil) {
+            self.image = image
+        }
     }
 }
