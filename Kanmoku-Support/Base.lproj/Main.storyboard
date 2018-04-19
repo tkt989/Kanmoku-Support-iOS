@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -207,22 +209,63 @@
                                     <segue destination="wNf-5Z-ZPD" kind="show" id="PnW-8H-qMw"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjR-as-RHj">
+                                <rect key="frame" x="16" y="194" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGZ-1m-16l">
+                                <rect key="frame" x="16" y="194" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EGZ-1m-16l" secondAttribute="height" multiplier="1:1" id="zek-nZ-Si8"/>
+                                </constraints>
+                                <state key="normal" image="textbutton"/>
+                                <connections>
+                                    <segue destination="mbu-gS-jzo" kind="show" id="ry2-8n-eHR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章で伝える" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-CK-kp6">
+                                <rect key="frame" x="24" y="202" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FiU-i5-eIe" customClass="ImageButton" customModule="Kanmoku_Support" customModuleProvider="target">
+                                <rect key="frame" x="24" y="386" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="textbutton"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EGZ-1m-16l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Nr-2S-c3g"/>
                             <constraint firstItem="Phu-kA-22D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9WI-Og-AgA"/>
                             <constraint firstItem="ZUE-9S-Vfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DHr-aY-dOi"/>
+                            <constraint firstItem="olX-CK-kp6" firstAttribute="leading" secondItem="EGZ-1m-16l" secondAttribute="leading" constant="8" id="FQm-jC-PtD"/>
                             <constraint firstItem="WiH-zS-TRf" firstAttribute="top" secondItem="Phu-kA-22D" secondAttribute="bottom" constant="16" id="GbN-mg-7rj"/>
                             <constraint firstItem="WiH-zS-TRf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lyb-4z-L1S"/>
+                            <constraint firstItem="EGZ-1m-16l" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="Mp7-qo-I2W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WiH-zS-TRf" secondAttribute="trailing" constant="16" id="Vlf-ZF-D1X"/>
                             <constraint firstItem="Phu-kA-22D" firstAttribute="top" secondItem="ZUE-9S-Vfy" secondAttribute="bottom" constant="16" id="WtY-BA-sJQ"/>
+                            <constraint firstItem="OjR-as-RHj" firstAttribute="trailing" secondItem="EGZ-1m-16l" secondAttribute="trailing" id="fhR-tF-Udw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUE-9S-Vfy" secondAttribute="trailing" constant="16" id="iLj-hN-Jsy"/>
                             <constraint firstItem="ZUE-9S-Vfy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lF5-H7-dMI"/>
+                            <constraint firstItem="OjR-as-RHj" firstAttribute="width" secondItem="EGZ-1m-16l" secondAttribute="width" id="quq-wV-r1g"/>
+                            <constraint firstItem="OjR-as-RHj" firstAttribute="top" secondItem="EGZ-1m-16l" secondAttribute="top" id="tj1-Nu-wff"/>
+                            <constraint firstItem="OjR-as-RHj" firstAttribute="height" secondItem="EGZ-1m-16l" secondAttribute="height" id="vge-Ny-ygf"/>
+                            <constraint firstItem="EGZ-1m-16l" firstAttribute="top" secondItem="WiH-zS-TRf" secondAttribute="bottom" constant="8" id="voK-F9-yhJ"/>
+                            <constraint firstItem="olX-CK-kp6" firstAttribute="top" secondItem="EGZ-1m-16l" secondAttribute="top" constant="8" id="x8S-HC-MvW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Phu-kA-22D" secondAttribute="trailing" constant="16" id="yFs-do-7DX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bXx-Tf-ozO"/>
+                    <connections>
+                        <outlet property="textButton" destination="EGZ-1m-16l" id="sa0-fX-keq"/>
+                        <outlet property="textButtonShadow" destination="OjR-as-RHj" id="RN7-w9-yZg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,5 +290,9 @@
     </scenes>
     <resources>
         <image name="face2" width="330" height="324"/>
+        <image name="textbutton" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HkS-7J-THT"/>
+    </inferredMetricsTieBreakers>
 </document>

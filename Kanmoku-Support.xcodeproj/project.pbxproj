@@ -11,6 +11,7 @@
 		16498DA020849D0900332403 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498D9F20849D0900332403 /* DrawingViewController.swift */; };
 		16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA12084A34500332403 /* ShowDrawingViewController.swift */; };
 		16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16498DA22084A34500332403 /* ShowDrawingViewController.xib */; };
+		16498DA72085ECE600332403 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA62085ECE600332403 /* ImageButton.swift */; };
 		1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FA207F92A80096B23C /* AppDelegate.swift */; };
 		1690D9FD207F92A80096B23C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FC207F92A80096B23C /* ViewController.swift */; };
 		1690DA00207F92A80096B23C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1690D9FE207F92A80096B23C /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		16498D9F20849D0900332403 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA12084A34500332403 /* ShowDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA22084A34500332403 /* ShowDrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDrawingViewController.xib; sourceTree = "<group>"; };
+		16498DA62085ECE600332403 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		1690D9F7207F92A80096B23C /* Kanmoku-Support.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanmoku-Support.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1690D9FA207F92A80096B23C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1690D9FC207F92A80096B23C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16498DA52085EC7100332403 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16498DA62085ECE600332403 /* ImageButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1690D9EE207F92A80096B23C = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		1690D9F9207F92A80096B23C /* Kanmoku-Support */ = {
 			isa = PBXGroup;
 			children = (
+				16498DA52085EC7100332403 /* View */,
 				16BE8C2A2081F7280041602C /* Model */,
 				16BE8C232081E6E80041602C /* ViewController */,
 				1690D9FA207F92A80096B23C /* AppDelegate.swift */,
@@ -437,6 +448,7 @@
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
 				16BE8C2C2081F7490041602C /* TTS.swift in Sources */,
 				16498DA020849D0900332403 /* DrawingViewController.swift in Sources */,
+				16498DA72085ECE600332403 /* ImageButton.swift in Sources */,
 				16BE8C2E20823E070041602C /* IllustSelectViewController.swift in Sources */,
 				1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */,
 				16BE8C3320825C380041602C /* IllustShowViewController.swift in Sources */,

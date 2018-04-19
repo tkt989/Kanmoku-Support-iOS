@@ -14,10 +14,19 @@ class ViewController: UIViewController {
     var image: UIImage = UIImage()
     @IBOutlet weak var canvas: Canvas!
     @IBOutlet weak var stack: UIStackView!
+    @IBOutlet weak var textButton: UIButton!
+    @IBOutlet weak var textButtonShadow: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        textButtonShadow.layer.shadowOpacity = 0.3
+        textButtonShadow.layer.shadowOffset = .zero
+        textButtonShadow.layer.shadowRadius = 5
+        textButtonShadow.layer.shadowColor = UIColor.black.cgColor
+        textButtonShadow.layer.cornerRadius = 10
+        textButton.layer.cornerRadius = 10
+        textButton.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
