@@ -38,6 +38,9 @@ class DrawingViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func clearDrawing(_ sender: UIButton) {
+        canvasView.clear()
+    }
     /*
     // MARK: - Navigation
 

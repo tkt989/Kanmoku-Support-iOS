@@ -23,6 +23,8 @@ class WritingViewController: UIViewController {
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         self.textView.inputAccessoryView = keyboardToolbar
         textView.becomeFirstResponder()
+        
+        textView.textContainerInset = UIEdgeInsetsMake(8, 8, 8, 8)
     }
 
     override func didReceiveMemoryWarning() {

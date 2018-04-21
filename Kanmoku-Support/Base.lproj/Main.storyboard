@@ -54,6 +54,7 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AXM-N3-26P">
                                 <rect key="frame" x="16" y="109" width="343" height="478"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
@@ -61,12 +62,12 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.95708550349999999" blue="0.95056008729999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AXM-N3-26P" firstAttribute="leading" secondItem="loi-ff-5l2" secondAttribute="leading" constant="16" id="1ag-ng-kIn"/>
                             <constraint firstItem="Cra-KB-YTw" firstAttribute="top" secondItem="AXM-N3-26P" secondAttribute="bottom" constant="16" id="3vU-BK-l34"/>
@@ -115,6 +116,16 @@
                                     <action selector="showDrawing:" destination="wNf-5Z-ZPD" eventType="touchUpInside" id="T3u-HF-M1x"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-MT-2k2">
+                                <rect key="frame" x="16" y="621" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OeO-2p-SS3"/>
+                                </constraints>
+                                <state key="normal" title="消去"/>
+                                <connections>
+                                    <action selector="clearDrawing:" destination="wNf-5Z-ZPD" eventType="touchUpInside" id="n3o-q4-pzd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -122,6 +133,8 @@
                             <constraint firstItem="P6o-1r-WgM" firstAttribute="width" secondItem="dgb-UB-i2f" secondAttribute="width" id="2Zp-yF-3xH"/>
                             <constraint firstItem="92f-Pp-ldL" firstAttribute="bottom" secondItem="dgb-UB-i2f" secondAttribute="bottom" constant="16" id="HSv-X1-AKm"/>
                             <constraint firstItem="92f-Pp-ldL" firstAttribute="trailing" secondItem="dgb-UB-i2f" secondAttribute="trailing" constant="16" id="h1C-hs-Ix8"/>
+                            <constraint firstItem="1Z3-MT-2k2" firstAttribute="leading" secondItem="92f-Pp-ldL" secondAttribute="leading" constant="16" id="iUM-qq-jz5"/>
+                            <constraint firstItem="92f-Pp-ldL" firstAttribute="bottom" secondItem="1Z3-MT-2k2" secondAttribute="bottom" constant="16" id="qPU-xp-tRD"/>
                             <constraint firstItem="dgb-UB-i2f" firstAttribute="top" secondItem="P6o-1r-WgM" secondAttribute="top" id="siw-pv-gaS"/>
                             <constraint firstItem="dgb-UB-i2f" firstAttribute="leading" secondItem="P6o-1r-WgM" secondAttribute="leading" id="vhJ-om-gvz"/>
                         </constraints>
@@ -139,7 +152,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9S1-x3-6uF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.95708550349999999" blue="0.95056008729999997" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zZ5-k2-OjY">
                             <size key="itemSize" width="179" height="181"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -330,7 +343,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.95708550347222221" blue="0.95056008727500008" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8nr-hh-jPP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="4cb-NJ-ard"/>
@@ -360,6 +373,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EAR-3H-jj2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.80000000000000004" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5Tq-ZN-e4O"/>
