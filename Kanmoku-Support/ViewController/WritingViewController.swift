@@ -25,6 +25,7 @@ class WritingViewController: UIViewController {
         textView.becomeFirstResponder()
         
         textView.textContainerInset = UIEdgeInsetsMake(8, 8, 8, 8)
+        textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
     }
 
     override func didReceiveMemoryWarning() {
