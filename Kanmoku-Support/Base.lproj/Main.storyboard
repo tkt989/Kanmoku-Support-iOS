@@ -188,88 +188,170 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUE-9S-Vfy">
-                                <rect key="frame" x="16" y="64" width="343" height="30"/>
-                                <state key="normal" title="文字で伝える"/>
-                                <connections>
-                                    <segue destination="mbu-gS-jzo" kind="show" id="HkS-7J-THT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-kA-22D">
-                                <rect key="frame" x="16" y="110" width="343" height="30"/>
-                                <state key="normal" title="イラストで伝える"/>
-                                <connections>
-                                    <segue destination="6YV-ve-l1I" kind="show" id="7dv-w9-8Xx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiH-zS-TRf">
-                                <rect key="frame" x="16" y="156" width="343" height="30"/>
-                                <state key="normal" title="描いて伝える"/>
-                                <connections>
-                                    <segue destination="wNf-5Z-ZPD" kind="show" id="PnW-8H-qMw"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjR-as-RHj">
-                                <rect key="frame" x="16" y="194" width="150" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGZ-1m-16l">
-                                <rect key="frame" x="16" y="194" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="EGZ-1m-16l" secondAttribute="height" multiplier="1:1" id="zek-nZ-Si8"/>
-                                </constraints>
-                                <state key="normal" image="textbutton"/>
-                                <connections>
-                                    <segue destination="mbu-gS-jzo" kind="show" id="ry2-8n-eHR"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章で伝える" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-CK-kp6">
-                                <rect key="frame" x="24" y="202" width="104" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="伝える方法を選びましょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-M9-r2c">
+                                <rect key="frame" x="16" y="80" width="208" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FiU-i5-eIe" customClass="ImageButton" customModule="Kanmoku_Support" customModuleProvider="target">
-                                <rect key="frame" x="24" y="386" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-hh-jPP">
+                                <rect key="frame" x="16" y="117" width="169" height="169"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsf-Da-vaM">
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="169"/>
+                                        <state key="normal" image="buttonText"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="mbu-gS-jzo" kind="show" id="Jfc-6K-ZaG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章で伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5b-NA-F8p">
+                                        <rect key="frame" x="8" y="8" width="153" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bsf-Da-vaM" firstAttribute="top" secondItem="8nr-hh-jPP" secondAttribute="top" id="2cv-Oq-eAE"/>
+                                    <constraint firstAttribute="bottom" secondItem="bsf-Da-vaM" secondAttribute="bottom" id="Qzh-d6-jmA"/>
+                                    <constraint firstAttribute="width" secondItem="8nr-hh-jPP" secondAttribute="height" multiplier="1:1" id="VN0-lG-AEo"/>
+                                    <constraint firstAttribute="trailing" secondItem="bsf-Da-vaM" secondAttribute="trailing" id="d6T-Uk-jlX"/>
+                                    <constraint firstItem="bsf-Da-vaM" firstAttribute="leading" secondItem="8nr-hh-jPP" secondAttribute="leading" id="en2-Ae-7fU"/>
+                                    <constraint firstItem="H5b-NA-F8p" firstAttribute="leading" secondItem="8nr-hh-jPP" secondAttribute="leading" constant="8" id="iPw-AQ-e2A"/>
+                                    <constraint firstItem="H5b-NA-F8p" firstAttribute="top" secondItem="8nr-hh-jPP" secondAttribute="top" constant="8" id="nDB-co-177"/>
+                                    <constraint firstAttribute="trailing" secondItem="H5b-NA-F8p" secondAttribute="trailing" constant="8" id="zQR-Uf-mtx"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="textbutton"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyW-Xf-9fu">
+                                <rect key="frame" x="190.5" y="117" width="168.5" height="169"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-iy-22n">
+                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="169"/>
+                                        <state key="normal" image="buttonIllust"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="6YV-ve-l1I" kind="show" id="dE0-Am-NGa"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="イラストで伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vm-p0-PYo">
+                                        <rect key="frame" x="8" y="8" width="152.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4Vm-p0-PYo" firstAttribute="leading" secondItem="SyW-Xf-9fu" secondAttribute="leading" constant="8" id="0tv-t1-J8W"/>
+                                    <constraint firstAttribute="width" secondItem="SyW-Xf-9fu" secondAttribute="height" multiplier="1:1" id="3FT-er-l9V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fdj-iy-22n" secondAttribute="trailing" id="7CL-Nm-EWn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fdj-iy-22n" secondAttribute="bottom" id="Ga6-3u-dYs"/>
+                                    <constraint firstItem="4Vm-p0-PYo" firstAttribute="top" secondItem="SyW-Xf-9fu" secondAttribute="top" constant="8" id="LV2-QE-26W"/>
+                                    <constraint firstItem="Fdj-iy-22n" firstAttribute="leading" secondItem="SyW-Xf-9fu" secondAttribute="leading" id="Yzl-6s-fqF"/>
+                                    <constraint firstItem="Fdj-iy-22n" firstAttribute="top" secondItem="SyW-Xf-9fu" secondAttribute="top" id="s6g-IM-QOB"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Vm-p0-PYo" secondAttribute="trailing" constant="8" id="wYV-CT-Dfd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-2c-wWq">
+                                <rect key="frame" x="16" y="302" width="169" height="169"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-VK-R0p">
+                                        <rect key="frame" x="0.0" y="0.5" width="169" height="169"/>
+                                        <state key="normal" image="buttonDrawing"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="wNf-5Z-ZPD" kind="show" id="8z6-oq-JyY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描いて伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjB-O1-vk9">
+                                        <rect key="frame" x="8" y="8.5" width="153" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="a6b-2c-wWq" secondAttribute="height" multiplier="1:1" id="52W-7s-YId"/>
+                                    <constraint firstItem="BPN-VK-R0p" firstAttribute="top" secondItem="a6b-2c-wWq" secondAttribute="top" id="CuB-sW-ivT"/>
+                                    <constraint firstAttribute="trailing" secondItem="BPN-VK-R0p" secondAttribute="trailing" id="HoV-yx-qpQ"/>
+                                    <constraint firstItem="OjB-O1-vk9" firstAttribute="top" secondItem="a6b-2c-wWq" secondAttribute="top" constant="8" id="JO1-0m-TJr"/>
+                                    <constraint firstItem="OjB-O1-vk9" firstAttribute="leading" secondItem="a6b-2c-wWq" secondAttribute="leading" constant="8" id="Rfi-VP-uEO"/>
+                                    <constraint firstAttribute="trailing" secondItem="OjB-O1-vk9" secondAttribute="trailing" constant="8" id="o8k-L3-5YW"/>
+                                    <constraint firstItem="BPN-VK-R0p" firstAttribute="leading" secondItem="a6b-2c-wWq" secondAttribute="leading" id="ut4-ok-yb6"/>
+                                    <constraint firstAttribute="bottom" secondItem="BPN-VK-R0p" secondAttribute="bottom" id="xit-gc-JHe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="EGZ-1m-16l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Nr-2S-c3g"/>
-                            <constraint firstItem="Phu-kA-22D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9WI-Og-AgA"/>
-                            <constraint firstItem="ZUE-9S-Vfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DHr-aY-dOi"/>
-                            <constraint firstItem="olX-CK-kp6" firstAttribute="leading" secondItem="EGZ-1m-16l" secondAttribute="leading" constant="8" id="FQm-jC-PtD"/>
-                            <constraint firstItem="WiH-zS-TRf" firstAttribute="top" secondItem="Phu-kA-22D" secondAttribute="bottom" constant="16" id="GbN-mg-7rj"/>
-                            <constraint firstItem="WiH-zS-TRf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lyb-4z-L1S"/>
-                            <constraint firstItem="EGZ-1m-16l" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="Mp7-qo-I2W"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WiH-zS-TRf" secondAttribute="trailing" constant="16" id="Vlf-ZF-D1X"/>
-                            <constraint firstItem="Phu-kA-22D" firstAttribute="top" secondItem="ZUE-9S-Vfy" secondAttribute="bottom" constant="16" id="WtY-BA-sJQ"/>
-                            <constraint firstItem="OjR-as-RHj" firstAttribute="trailing" secondItem="EGZ-1m-16l" secondAttribute="trailing" id="fhR-tF-Udw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUE-9S-Vfy" secondAttribute="trailing" constant="16" id="iLj-hN-Jsy"/>
-                            <constraint firstItem="ZUE-9S-Vfy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lF5-H7-dMI"/>
-                            <constraint firstItem="OjR-as-RHj" firstAttribute="width" secondItem="EGZ-1m-16l" secondAttribute="width" id="quq-wV-r1g"/>
-                            <constraint firstItem="OjR-as-RHj" firstAttribute="top" secondItem="EGZ-1m-16l" secondAttribute="top" id="tj1-Nu-wff"/>
-                            <constraint firstItem="OjR-as-RHj" firstAttribute="height" secondItem="EGZ-1m-16l" secondAttribute="height" id="vge-Ny-ygf"/>
-                            <constraint firstItem="EGZ-1m-16l" firstAttribute="top" secondItem="WiH-zS-TRf" secondAttribute="bottom" constant="8" id="voK-F9-yhJ"/>
-                            <constraint firstItem="olX-CK-kp6" firstAttribute="top" secondItem="EGZ-1m-16l" secondAttribute="top" constant="8" id="x8S-HC-MvW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Phu-kA-22D" secondAttribute="trailing" constant="16" id="yFs-do-7DX"/>
+                            <constraint firstItem="8nr-hh-jPP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="4cb-NJ-ard"/>
+                            <constraint firstItem="SyW-Xf-9fu" firstAttribute="top" secondItem="8nr-hh-jPP" secondAttribute="top" id="5eb-ji-H4z"/>
+                            <constraint firstItem="a6b-2c-wWq" firstAttribute="leading" secondItem="bsf-Da-vaM" secondAttribute="leading" id="F30-0j-uOv"/>
+                            <constraint firstItem="8nr-hh-jPP" firstAttribute="top" secondItem="Fxp-M9-r2c" secondAttribute="bottom" constant="16" id="Gro-qP-JyL"/>
+                            <constraint firstItem="SyW-Xf-9fu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="KRv-hb-H2d"/>
+                            <constraint firstItem="a6b-2c-wWq" firstAttribute="top" secondItem="bsf-Da-vaM" secondAttribute="bottom" constant="16" id="Vx2-wO-2NZ"/>
+                            <constraint firstItem="Fxp-M9-r2c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i2q-uy-zfa"/>
+                            <constraint firstItem="Fxp-M9-r2c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="mbZ-pK-fkm"/>
+                            <constraint firstItem="SyW-Xf-9fu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="sDo-yH-Nhr"/>
+                            <constraint firstItem="8nr-hh-jPP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xSK-kH-FKy"/>
+                            <constraint firstItem="a6b-2c-wWq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="z08-oc-FgM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bXx-Tf-ozO"/>
-                    <connections>
-                        <outlet property="textButton" destination="EGZ-1m-16l" id="sa0-fX-keq"/>
-                        <outlet property="textButtonShadow" destination="OjR-as-RHj" id="RN7-w9-yZg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="-431"/>
+            <point key="canvasLocation" x="336.80000000000001" y="-431.33433283358323"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uG1-3x-gBt">
@@ -289,10 +371,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buttonDrawing" width="512" height="512"/>
+        <image name="buttonIllust" width="512" height="512"/>
+        <image name="buttonText" width="512" height="512"/>
         <image name="face2" width="330" height="324"/>
-        <image name="textbutton" width="512" height="512"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HkS-7J-THT"/>
-    </inferredMetricsTieBreakers>
 </document>
