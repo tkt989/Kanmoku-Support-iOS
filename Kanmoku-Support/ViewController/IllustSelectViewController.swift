@@ -11,8 +11,20 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class IllustSelectViewController: UICollectionViewController {
-    let images: [String] = ["face1", "face2"]
-
+    // MARK: Images
+    let images = [
+        "face1",
+        "face2",
+        "face3",
+        "face4",
+        "face5",
+        "face6",
+        "face7",
+        "face8",
+        "face9"
+    ]
+    
+    // MARK: methods
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -11,7 +11,7 @@ import NXDrawKit
 
 class DrawingViewController: UIViewController {
     var canvasView: Canvas!
-    var image: UIImage?
+    var image = UIImage()
     @IBOutlet weak var showButton: UIButton!
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class DrawingViewController: UIViewController {
     
     @IBAction func showDrawing(_ sender: UIButton) {
         let vc = ShowDrawingViewController()
-        vc.image = image!
+        vc.image = image
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -62,8 +62,9 @@ extension DrawingViewController : CanvasDelegate {
     }
     
     func canvas(_ canvas: Canvas, didUpdateDrawing drawing: Drawing, mergedImage image: UIImage?) {
-        if (image != nil) {
-            self.image = image
+        guard image != nil else {
+            return
         }
+        self.image = image!
     }
 }

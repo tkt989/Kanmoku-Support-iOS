@@ -16,10 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var textButton: UIButton!
     @IBOutlet weak var textButtonShadow: UIView!
+    @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        contentView.sizeToFit()
+        navigationItem.title = Bundle.main.infoDictionary?["CFBundleDisplayName"] as! String
     }
 
     override func didReceiveMemoryWarning() {

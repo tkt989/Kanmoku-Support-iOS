@@ -28,6 +28,9 @@
                         <constraint firstAttribute="height" constant="30" id="lvD-xk-fXp"/>
                     </constraints>
                     <state key="normal" title="戻る"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    </variation>
                     <connections>
                         <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="6kD-ml-ul9"/>
                     </connections>
