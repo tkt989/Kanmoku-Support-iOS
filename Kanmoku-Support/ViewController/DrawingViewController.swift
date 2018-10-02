@@ -24,7 +24,7 @@ class DrawingViewController: UIViewController {
         self.canvasView = canvasView
         
         self.view.addSubview(self.canvasView)
-        self.view.sendSubview(toBack: self.canvasView)
+        self.view.sendSubviewToBack(self.canvasView)
     }
 
     override func didReceiveMemoryWarning() {

@@ -289,13 +289,16 @@
 				TargetAttributes = {
 					1690D9F6207F92A80096B23C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					1690DA0A207F92AA0096B23C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 1690D9F6207F92A80096B23C;
 					};
 					1690DA15207F92AA0096B23C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 1690D9F6207F92A80096B23C;
 					};
 				};
@@ -623,7 +626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-Support";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -642,7 +645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-Support";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -663,7 +666,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanmoku-Support.app/Kanmoku-Support";
 			};
@@ -685,7 +688,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanmoku-Support.app/Kanmoku-Support";
 			};
@@ -706,7 +709,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Kanmoku-Support";
 			};
@@ -727,7 +730,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-SupportUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Kanmoku-Support";
 			};

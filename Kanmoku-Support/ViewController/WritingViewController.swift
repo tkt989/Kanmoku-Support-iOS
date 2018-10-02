@@ -24,7 +24,7 @@ class WritingViewController: UIViewController {
         self.textView.inputAccessoryView = keyboardToolbar
         textView.becomeFirstResponder()
         
-        textView.textContainerInset = UIEdgeInsetsMake(8, 8, 8, 8)
+        textView.textContainerInset = UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8)
         textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
     }
 

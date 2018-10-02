@@ -68,13 +68,13 @@ extension ViewController: CanvasDelegate
         // you can share your image with UIActivityViewController
         if let pngImage = image?.asPNGImage() {
             let activityViewController = UIActivityViewController(activityItems: [pngImage], applicationActivities: nil)
-            activityViewController.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
                 if !completed {
                     // User canceled
                     return
                 }
                 
-                if activityType == UIActivityType.saveToCameraRoll {
+                if activityType == UIActivity.ActivityType.saveToCameraRoll {
                     let alert = UIAlertController(title: nil, message: "Image is saved successfully", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(alert, animated: true)
