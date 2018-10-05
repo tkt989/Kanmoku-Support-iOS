@@ -8,24 +8,27 @@
 
 import UIKit
 
-class WritingViewController: UIViewController {
+class WritingViewController: UIViewController, WritingViewProtocol {
     @IBOutlet weak var textView: UITextView!
-    private var tts: TTS = TTS()
+    @IBOutlet weak var speechButton: UIButton!
+    private var presenter: WritingPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presenter = WritingPresenter(self)
 
-        // Do any additional setup after loading the view.
+        // キーボードに完了ボタンを表示する
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(WritingViewController.dismissKeyboard))
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         self.textView.inputAccessoryView = keyboardToolbar
-        textView.becomeFirstResponder()
+        self.textView.becomeFirstResponder()
         
-        textView.textContainerInset = UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8)
-        textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
+        self.textView.textContainerInset = UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8)
+        self.textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,9 +53,14 @@ class WritingViewController: UIViewController {
     }
     
     @IBAction func speech(_ sender: UIButton) {
-        sender.isEnabled = false
-        tts.speech(self.textView.text, didFinish: { () -> () in
-            sender.isEnabled = true
-        })
+        self.presenter.speech(text: self.textView.text)
+    }
+    
+    func startSpeech() {
+        self.speechButton.isEnabled = false
+    }
+    
+    func stopSpeech() {
+        self.speechButton.isEnabled = true
     }
 }

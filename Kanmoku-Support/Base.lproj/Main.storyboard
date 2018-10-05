@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="伝えたいことを書きましょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eC-3B-DLX">
-                                <rect key="frame" x="16" y="80" width="394.5" height="36"/>
+                                <rect key="frame" x="16" y="86" width="394.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,7 +60,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AXM-N3-26P">
-                                <rect key="frame" x="16" y="124" width="992" height="1162"/>
+                                <rect key="frame" x="16" y="130" width="992" height="1156"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -94,6 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="loi-ff-5l2"/>
                     </view>
                     <connections>
+                        <outlet property="speechButton" destination="ujo-pT-MFc" id="ogK-eo-3xz"/>
                         <outlet property="textView" destination="AXM-N3-26P" id="CZf-0I-Wq1"/>
                     </connections>
                 </viewController>
@@ -235,7 +234,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="伝える方法を選びましょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-M9-r2c">
-                                <rect key="frame" x="16" y="80" width="364" height="36"/>
+                                <rect key="frame" x="16" y="86" width="364" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -244,10 +243,10 @@
                                 </variation>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-bc-rCe">
-                                <rect key="frame" x="0.0" y="124" width="1024" height="1242"/>
+                                <rect key="frame" x="0.0" y="130" width="1024" height="1236"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsx-PS-hqh">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1242"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1236"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-hh-jPP">
                                                 <rect key="frame" x="16" y="16" width="461" height="461"/>
@@ -346,10 +345,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-2c-wWq">
-                                                <rect key="frame" x="16" y="493" width="461" height="461"/>
+                                                <rect key="frame" x="16" y="493" width="461" height="460.5"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-VK-R0p">
-                                                        <rect key="frame" x="0.0" y="0.5" width="461" height="460.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="461" height="460.5"/>
                                                         <state key="normal" image="buttonDrawing"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -361,7 +360,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描いて伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjB-O1-vk9">
-                                                        <rect key="frame" x="8" y="8.5" width="445" height="36"/>
+                                                        <rect key="frame" x="8" y="8" width="445" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -446,7 +445,7 @@
             <objects>
                 <navigationController id="zqX-Hp-Pp8" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EAR-3H-jj2">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.80000000000000004" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -460,9 +459,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buttonDrawing" width="512" height="512"/>
-        <image name="buttonIllust" width="512" height="512"/>
-        <image name="buttonText" width="512" height="512"/>
-        <image name="face2" width="110" height="108"/>
+        <image name="buttonDrawing" width="384" height="384"/>
+        <image name="buttonIllust" width="384" height="384"/>
+        <image name="buttonText" width="384" height="384"/>
+        <image name="face2" width="330" height="324"/>
     </resources>
 </document>
