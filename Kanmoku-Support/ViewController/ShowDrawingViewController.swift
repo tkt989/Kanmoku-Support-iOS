@@ -17,7 +17,10 @@ class ShowDrawingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.imageView.image = image
-        self.imageView.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
+        
+        if (Settings.sharedInstance.isReverseShow) {
+            self.imageView.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
+        }
     }
 
     override func didReceiveMemoryWarning() {

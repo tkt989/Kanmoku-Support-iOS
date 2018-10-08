@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00C448A44B21BD6598B1A329 /* Pods_Kanmoku_SupportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */; };
+		163BDE8C216B135A007C7E07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BDE8B216B135A007C7E07 /* Settings.swift */; };
 		16498DA020849D0900332403 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498D9F20849D0900332403 /* DrawingViewController.swift */; };
 		16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA12084A34500332403 /* ShowDrawingViewController.swift */; };
 		16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16498DA22084A34500332403 /* ShowDrawingViewController.xib */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		163BDE8B216B135A007C7E07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		16498D9F20849D0900332403 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA12084A34500332403 /* ShowDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA22084A34500332403 /* ShowDrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDrawingViewController.xib; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				16BE8C2B2081F7490041602C /* TTS.swift */,
+				163BDE8B216B135A007C7E07 /* Settings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			files = (
 				16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */,
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
+				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
 				16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
 				16BE8C2C2081F7490041602C /* TTS.swift in Sources */,

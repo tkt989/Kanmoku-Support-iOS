@@ -18,7 +18,10 @@ class TextShowViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         label.text = self.text
-        label.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
+        
+        if (Settings.sharedInstance.isReverseShow) {
+            label.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
+        }
     }
 
     override func didReceiveMemoryWarning() {
