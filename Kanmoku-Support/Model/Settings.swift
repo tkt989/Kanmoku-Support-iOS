@@ -11,7 +11,12 @@ import Foundation
 class Settings {
     private static let userDefaults = UserDefaults.standard
     static let sharedInstance = Settings()
-    private init() {}
+    private init() {
+        Settings.userDefaults.register(defaults:
+        [
+            "reverse_show": true
+        ])
+    }
     
     var isReverseShow: Bool {
         get {
