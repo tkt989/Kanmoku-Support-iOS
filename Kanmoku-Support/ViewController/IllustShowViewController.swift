@@ -18,7 +18,10 @@ class IllustShowViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         imageView.image = illust
-        imageView.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
+        
+        if (Settings.sharedInstance.isReverseShow) {
+            self.imageView.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
+        }
     }
 
     override func didReceiveMemoryWarning() {
