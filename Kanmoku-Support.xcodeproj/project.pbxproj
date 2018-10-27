@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		00C448A44B21BD6598B1A329 /* Pods_Kanmoku_SupportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */; };
 		163BDE8C216B135A007C7E07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BDE8B216B135A007C7E07 /* Settings.swift */; };
+		163F5FB52174D0A9000D2839 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 163F5FB42174D0A9000D2839 /* assets */; };
+		163F5FB72174D8EF000D2839 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F5FB62174D8EF000D2839 /* Templates.swift */; };
 		16498DA020849D0900332403 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498D9F20849D0900332403 /* DrawingViewController.swift */; };
 		16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA12084A34500332403 /* ShowDrawingViewController.swift */; };
 		16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16498DA22084A34500332403 /* ShowDrawingViewController.xib */; };
+		167872B621849CE400BD2902 /* TemplatesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167872B521849CE400BD2902 /* TemplatesContract.swift */; };
+		167872BA2184A49700BD2902 /* TemplatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167872B92184A49700BD2902 /* TemplatesViewController.swift */; };
 		1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FA207F92A80096B23C /* AppDelegate.swift */; };
 		1690D9FD207F92A80096B23C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FC207F92A80096B23C /* ViewController.swift */; };
 		1690DA00207F92A80096B23C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1690D9FE207F92A80096B23C /* Main.storyboard */; };
@@ -54,9 +58,13 @@
 /* Begin PBXFileReference section */
 		0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		163BDE8B216B135A007C7E07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		163F5FB42174D0A9000D2839 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = "Kanmoku-Support/assets"; sourceTree = "<group>"; };
+		163F5FB62174D8EF000D2839 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
 		16498D9F20849D0900332403 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA12084A34500332403 /* ShowDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA22084A34500332403 /* ShowDrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDrawingViewController.xib; sourceTree = "<group>"; };
+		167872B521849CE400BD2902 /* TemplatesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesContract.swift; sourceTree = "<group>"; };
+		167872B92184A49700BD2902 /* TemplatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesViewController.swift; sourceTree = "<group>"; };
 		1690D9F7207F92A80096B23C /* Kanmoku-Support.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanmoku-Support.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1690D9FA207F92A80096B23C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1690D9FC207F92A80096B23C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,9 +127,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167872B421849C3F00BD2902 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				167872B521849CE400BD2902 /* TemplatesContract.swift */,
+				167872B92184A49700BD2902 /* TemplatesViewController.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 		1690D9EE207F92A80096B23C = {
 			isa = PBXGroup;
 			children = (
+				163F5FB42174D0A9000D2839 /* assets */,
 				1690D9F9207F92A80096B23C /* Kanmoku-Support */,
 				1690DA0E207F92AA0096B23C /* Kanmoku-SupportTests */,
 				1690DA19207F92AA0096B23C /* Kanmoku-SupportUITests */,
@@ -197,6 +215,7 @@
 			children = (
 				16BE8C2B2081F7490041602C /* TTS.swift */,
 				163BDE8B216B135A007C7E07 /* Settings.swift */,
+				163F5FB62174D8EF000D2839 /* Templates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +223,7 @@
 		16DA4F7E2167C9CB00C86180 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				167872B421849C3F00BD2902 /* Templates */,
 				16DA4F7F2167C9E500C86180 /* Writing */,
 			);
 			path = UI;
@@ -353,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163F5FB52174D0A9000D2839 /* assets in Resources */,
 				16BE8C292081E9C70041602C /* TextShowViewController.xib in Resources */,
 				16BE8C3420825C380041602C /* IllustShowViewController.xib in Resources */,
 				1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */,
@@ -459,17 +480,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167872B621849CE400BD2902 /* TemplatesContract.swift in Sources */,
 				16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */,
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
 				16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
+				167872BA2184A49700BD2902 /* TemplatesViewController.swift in Sources */,
 				16BE8C2C2081F7490041602C /* TTS.swift in Sources */,
 				16498DA020849D0900332403 /* DrawingViewController.swift in Sources */,
 				16BE8C2E20823E070041602C /* IllustSelectViewController.swift in Sources */,
 				1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */,
 				16BE8C3320825C380041602C /* IllustShowViewController.swift in Sources */,
 				16DA4F812167CAD100C86180 /* WritingPresenter.swift in Sources */,
+				163F5FB72174D8EF000D2839 /* Templates.swift in Sources */,
 				16DA4F832167CB3C00C86180 /* WritingContract.swift in Sources */,
 				16BE8C3020823F470041602C /* IllustCell.swift in Sources */,
 			);

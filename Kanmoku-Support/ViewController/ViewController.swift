@@ -19,6 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
+        var location = "assets/templates"
+        var fileType = "json"
+        if let path = Bundle.main.path(forResource: location, ofType: fileType) {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                print(String(data: data, encoding: .utf8))
+2            } catch let error {
+                print(error.localizedDescription)
+            }}
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         contentView.sizeToFit()
