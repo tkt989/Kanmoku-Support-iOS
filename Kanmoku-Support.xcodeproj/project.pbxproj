@@ -11,6 +11,7 @@
 		163BDE8C216B135A007C7E07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BDE8B216B135A007C7E07 /* Settings.swift */; };
 		163F5FB52174D0A9000D2839 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 163F5FB42174D0A9000D2839 /* assets */; };
 		163F5FB72174D8EF000D2839 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F5FB62174D8EF000D2839 /* Templates.swift */; };
+		1646A9B8218DF8A000A2E301 /* TemplatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646A9B7218DF8A000A2E301 /* TemplatesPresenter.swift */; };
 		16498DA020849D0900332403 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498D9F20849D0900332403 /* DrawingViewController.swift */; };
 		16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA12084A34500332403 /* ShowDrawingViewController.swift */; };
 		16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16498DA22084A34500332403 /* ShowDrawingViewController.xib */; };
@@ -60,6 +61,7 @@
 		163BDE8B216B135A007C7E07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		163F5FB42174D0A9000D2839 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = "Kanmoku-Support/assets"; sourceTree = "<group>"; };
 		163F5FB62174D8EF000D2839 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
+		1646A9B7218DF8A000A2E301 /* TemplatesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPresenter.swift; sourceTree = "<group>"; };
 		16498D9F20849D0900332403 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA12084A34500332403 /* ShowDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA22084A34500332403 /* ShowDrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDrawingViewController.xib; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				167872B521849CE400BD2902 /* TemplatesContract.swift */,
 				167872B92184A49700BD2902 /* TemplatesViewController.swift */,
+				1646A9B7218DF8A000A2E301 /* TemplatesPresenter.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167872B621849CE400BD2902 /* TemplatesContract.swift in Sources */,
+				1646A9B8218DF8A000A2E301 /* TemplatesPresenter.swift in Sources */,
 				16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */,
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,

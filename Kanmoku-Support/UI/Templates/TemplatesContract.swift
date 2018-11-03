@@ -8,11 +8,11 @@
 
 import Foundation
 
-import Foundation
-
 protocol TemplatesViewProtocol {
+    func startSpeech()
+    func stopSpeech()
 }
 
 protocol TemplatesPresenterProtocol {
-    func addText(text: String)
+    func speech(text: String)
 }
