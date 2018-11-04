@@ -43,6 +43,9 @@ class TemplatesViewController: UIViewController, TemplatesViewProtocol {
     @IBAction func tapSpeech(_ sender: Any) {
         self.presenter.speech(text: self.textView.text)
     }
+    @IBAction func tapClear(_ sender: Any) {
+        self.textView.text = ""
+    }
     
     func startSpeech() {
         self.speechButton.isEnabled = false

@@ -536,6 +536,16 @@
                                             <action selector="tapShowText:" destination="SdM-hn-961" eventType="touchUpInside" id="Ufr-RI-ga3"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-BR-GxL">
+                                        <rect key="frame" x="481.5" y="8" width="61" height="48"/>
+                                        <state key="normal" title="消す"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="tapClear:" destination="SdM-hn-961" eventType="touchUpInside" id="6Zc-vN-Anc"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EX-Ph-HSr">
                                         <rect key="frame" x="16" y="8" width="61" height="48"/>
                                         <state key="normal" title="話す"/>
@@ -548,9 +558,11 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="mv3-BR-GxL" firstAttribute="centerY" secondItem="Pdo-Eb-reI" secondAttribute="centerY" id="1xS-4n-y0u"/>
                                     <constraint firstAttribute="height" constant="64" id="41g-wC-f6f"/>
                                     <constraint firstItem="2EX-Ph-HSr" firstAttribute="centerY" secondItem="Pdo-Eb-reI" secondAttribute="centerY" id="7He-Zt-pV0"/>
                                     <constraint firstAttribute="trailing" secondItem="du7-G3-yI4" secondAttribute="trailing" constant="16" id="GIQ-lL-zet"/>
+                                    <constraint firstItem="mv3-BR-GxL" firstAttribute="centerX" secondItem="Pdo-Eb-reI" secondAttribute="centerX" id="fCd-Qt-Bnt"/>
                                     <constraint firstItem="2EX-Ph-HSr" firstAttribute="leading" secondItem="Pdo-Eb-reI" secondAttribute="leading" constant="16" id="fqq-9V-066"/>
                                     <constraint firstItem="du7-G3-yI4" firstAttribute="centerY" secondItem="Pdo-Eb-reI" secondAttribute="centerY" id="lfl-Go-ups"/>
                                 </constraints>
