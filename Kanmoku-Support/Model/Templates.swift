@@ -16,6 +16,11 @@ public struct Situation: Codable {
     
     let title: String
     let templates: [Template]
+    
+    static func load(text: String) -> [Situation] {
+        let situations = try! JSONDecoder().decode([Situation].self, from: text.data(using: .utf8)!)
+        return situations
+    }
 }
 
 public struct Template: Codable {

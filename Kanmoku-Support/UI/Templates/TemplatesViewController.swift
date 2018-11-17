@@ -24,14 +24,19 @@ class TemplatesViewController: UIViewController, TemplatesViewProtocol {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        self.situations = [
-            Situation(title: "テスト", templates: [
-                Template(content: "Hello")
-            ]),
-            Situation(title: "ごめん", templates: [
-                Template(content: "Gomen")
-            ])
-        ]
+        
+        var location = "assets/templates"
+        var fileType = "json"
+        if let path = Bundle.main.path(forResource: location, ofType: fileType) {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let text = String(data: data, encoding: .utf8)
+                
+                self.situations = Situation.load(text: text!)
+            } catch let error {
+                    print(error.localizedDescription)
+            }
+        }   
     }
     
     @IBAction func tapShowText(_ sender: UIButton) {
