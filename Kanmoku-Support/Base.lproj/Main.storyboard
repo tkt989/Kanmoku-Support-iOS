@@ -397,7 +397,7 @@
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4Z-1K-lgP">
                                                         <rect key="frame" x="0.0" y="0.0" width="461" height="460.5"/>
-                                                        <state key="normal" image="buttonDrawing"/>
+                                                        <state key="normal" image="buttonTemplate"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="5"/>
@@ -407,7 +407,7 @@
                                                             <segue destination="SdM-hn-961" kind="show" id="bFh-su-YFB"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描いて伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvR-MN-pux">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定型文で伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvR-MN-pux">
                                                         <rect key="frame" x="8" y="8" width="445" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
@@ -614,6 +614,7 @@
     <resources>
         <image name="buttonDrawing" width="384" height="384"/>
         <image name="buttonIllust" width="384" height="384"/>
+        <image name="buttonTemplate" width="384" height="384"/>
         <image name="buttonText" width="384" height="384"/>
         <image name="face2" width="330" height="324"/>
     </resources>
