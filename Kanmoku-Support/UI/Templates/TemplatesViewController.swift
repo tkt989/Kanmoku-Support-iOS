@@ -23,7 +23,7 @@ class TemplatesViewController: UIViewController, TemplatesViewProtocol {
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+        self.textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
         
         var location = "assets/templates"
         var fileType = "json"

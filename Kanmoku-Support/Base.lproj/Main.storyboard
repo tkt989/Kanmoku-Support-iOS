@@ -77,7 +77,7 @@
                                 </variation>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98431372549999996" green="0.95708550349999999" blue="0.95056008729999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.95686274509803915" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AXM-N3-26P" firstAttribute="leading" secondItem="loi-ff-5l2" secondAttribute="leading" constant="16" id="1ag-ng-kIn"/>
                             <constraint firstItem="Cra-KB-YTw" firstAttribute="top" secondItem="AXM-N3-26P" secondAttribute="bottom" constant="16" id="3vU-BK-l34"/>
@@ -501,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fG5-nx-VKj">
-                                <rect key="frame" x="0.0" y="70" width="1024" height="1082"/>
+                                <rect key="frame" x="0.0" y="70" width="1024" height="1074"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="uYO-ms-hVV">
@@ -515,13 +515,21 @@
                                 </prototypes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmY-0z-HKo">
-                                <rect key="frame" x="0.0" y="1152" width="1024" height="150"/>
+                                <rect key="frame" x="16" y="1152" width="992" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="iKu-41-7x9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-Eb-reI">
                                 <rect key="frame" x="0.0" y="1302" width="1024" height="64"/>
@@ -568,15 +576,15 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.95686274509803915" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FZB-1w-QJw" firstAttribute="trailing" secondItem="nmY-0z-HKo" secondAttribute="trailing" id="4iv-Wh-gKU"/>
+                            <constraint firstItem="FZB-1w-QJw" firstAttribute="trailing" secondItem="nmY-0z-HKo" secondAttribute="trailing" constant="16" id="4iv-Wh-gKU"/>
                             <constraint firstItem="fG5-nx-VKj" firstAttribute="leading" secondItem="FZB-1w-QJw" secondAttribute="leading" id="GGt-g1-AYw"/>
-                            <constraint firstItem="nmY-0z-HKo" firstAttribute="leading" secondItem="FZB-1w-QJw" secondAttribute="leading" id="Um1-Wv-xzr"/>
+                            <constraint firstItem="nmY-0z-HKo" firstAttribute="leading" secondItem="FZB-1w-QJw" secondAttribute="leading" constant="16" id="Um1-Wv-xzr"/>
                             <constraint firstItem="Pdo-Eb-reI" firstAttribute="top" secondItem="nmY-0z-HKo" secondAttribute="bottom" id="Ur6-BR-jzs"/>
                             <constraint firstItem="FZB-1w-QJw" firstAttribute="bottom" secondItem="Pdo-Eb-reI" secondAttribute="bottom" id="WZe-ln-u69"/>
                             <constraint firstItem="Pdo-Eb-reI" firstAttribute="leading" secondItem="FZB-1w-QJw" secondAttribute="leading" id="aW6-FY-Bqp"/>
-                            <constraint firstItem="nmY-0z-HKo" firstAttribute="top" secondItem="fG5-nx-VKj" secondAttribute="bottom" id="i8T-F2-Vjb"/>
+                            <constraint firstItem="nmY-0z-HKo" firstAttribute="top" secondItem="fG5-nx-VKj" secondAttribute="bottom" constant="8" id="i8T-F2-Vjb"/>
                             <constraint firstItem="FZB-1w-QJw" firstAttribute="trailing" secondItem="fG5-nx-VKj" secondAttribute="trailing" id="iJ6-Oz-cI3"/>
                             <constraint firstItem="FZB-1w-QJw" firstAttribute="trailing" secondItem="Pdo-Eb-reI" secondAttribute="trailing" id="tAY-iX-swv"/>
                             <constraint firstItem="fG5-nx-VKj" firstAttribute="top" secondItem="FZB-1w-QJw" secondAttribute="top" id="xJM-r2-xgc"/>
