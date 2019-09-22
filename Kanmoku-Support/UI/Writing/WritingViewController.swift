@@ -29,6 +29,8 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         
         self.textView.textContainerInset = UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8)
         self.textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
+        
+        self.setupNavigationItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,8 +38,14 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         // Dispose of any resources that can be recreated.
     }
     
+    private func setupNavigationItems() {
+        let save = UIBarButtonItem(title: "保存", style: .plain, target: self, action: #selector(saveText(_:)))
+        let textList = UIBarButtonItem(title: "一覧", style: .plain, target: self, action: #selector(textListClicked(_:)))
+        self.navigationItem.rightBarButtonItems = [textList, save]
+    }
+    
     @objc func dismissKeyboard() {
-        view.endEditing(true)
+        self.view.endEditing(true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -56,11 +64,47 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         self.presenter.speech(text: self.textView.text)
     }
     
+    @objc private func saveText(_ sender: UIButton) {
+        if self.textView.text.isBlank {
+            let alert = UIAlertController(title: "保存できません", message: "空の文章は保存できません", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        var textList = UserDefaults.standard.array(forKey: "TEXT_LIST") ?? []
+        textList.append(self.textView.text)
+        UserDefaults.standard.set(textList, forKey: "TEXT_LIST")
+        
+        let alert = UIAlertController(title: "保存しました。", message: "「一覧」から保存した文章を読み出すことができます", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func textListClicked(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "textList", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! TextListViewController
+        vc.listener = { text in
+            self.textView.text = text
+        }
+    }
+    
     func startSpeech() {
         self.speechButton.isEnabled = false
     }
     
     func stopSpeech() {
         self.speechButton.isEnabled = true
+    }
+}
+
+extension String {
+    var isBlank: Bool {
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty
     }
 }
