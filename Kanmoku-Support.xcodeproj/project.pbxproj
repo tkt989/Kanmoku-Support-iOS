@@ -35,6 +35,7 @@
 		16BE8C36208264B40041602C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16BE8C35208264B40041602C /* Settings.bundle */; };
 		16DA4F812167CAD100C86180 /* WritingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA4F802167CAD000C86180 /* WritingPresenter.swift */; };
 		16DA4F832167CB3C00C86180 /* WritingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA4F822167CB3C00C86180 /* WritingContract.swift */; };
+		16EFE8B12332785F000B6D95 /* TextListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EFE8B02332785F000B6D95 /* TextListViewController.swift */; };
 		5420FAEC9331CEBC66579A99 /* Pods_Kanmoku_SupportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */; };
 		5A6AEAD81DD9B8177971938F /* Pods_Kanmoku_Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383B4C8527131A61DA8192FD /* Pods_Kanmoku_Support.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		16BE8C35208264B40041602C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		16DA4F802167CAD000C86180 /* WritingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPresenter.swift; sourceTree = "<group>"; };
 		16DA4F822167CB3C00C86180 /* WritingContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingContract.swift; sourceTree = "<group>"; };
+		16EFE8B02332785F000B6D95 /* TextListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListViewController.swift; sourceTree = "<group>"; };
 		172E7894D134034A4E891C1D /* Pods-Kanmoku-SupportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportTests/Pods-Kanmoku-SupportTests.release.xcconfig"; sourceTree = "<group>"; };
 		261182AE04FDD1D837D0FBFC /* Pods-Kanmoku-SupportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportUITests/Pods-Kanmoku-SupportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +228,7 @@
 		16DA4F7E2167C9CB00C86180 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				16EFE8A7232FDBA9000B6D95 /* TextList */,
 				167872B421849C3F00BD2902 /* Templates */,
 				16DA4F7F2167C9E500C86180 /* Writing */,
 			);
@@ -240,6 +243,14 @@
 				16DA4F822167CB3C00C86180 /* WritingContract.swift */,
 			);
 			path = Writing;
+			sourceTree = "<group>";
+		};
+		16EFE8A7232FDBA9000B6D95 /* TextList */ = {
+			isa = PBXGroup;
+			children = (
+				16EFE8B02332785F000B6D95 /* TextListViewController.swift */,
+			);
+			path = TextList;
 			sourceTree = "<group>";
 		};
 		2C87997D4B5BE4A48338F0AF /* Pods */ = {
@@ -498,6 +509,7 @@
 				16BE8C3320825C380041602C /* IllustShowViewController.swift in Sources */,
 				16DA4F812167CAD100C86180 /* WritingPresenter.swift in Sources */,
 				163F5FB72174D8EF000D2839 /* Templates.swift in Sources */,
+				16EFE8B12332785F000B6D95 /* TextListViewController.swift in Sources */,
 				16DA4F832167CB3C00C86180 /* WritingContract.swift in Sources */,
 				16BE8C3020823F470041602C /* IllustCell.swift in Sources */,
 			);

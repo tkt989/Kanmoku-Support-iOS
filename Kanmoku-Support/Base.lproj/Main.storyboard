@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
-    <device id="ipad12_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +13,11 @@
             <objects>
                 <viewController title="文章で伝える" id="mbu-gS-jzo" customClass="WritingViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91c-ug-aeC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="伝えたいことを書きましょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eC-3B-DLX">
-                                <rect key="frame" x="16" y="86" width="394.5" height="36"/>
+                                <rect key="frame" x="16" y="104" width="225.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,10 +26,10 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cra-KB-YTw">
-                                <rect key="frame" x="0.0" y="1302" width="1024" height="64"/>
+                                <rect key="frame" x="0.0" y="798" width="414" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-Jm-cnm">
-                                        <rect key="frame" x="917" y="8" width="91" height="48"/>
+                                        <rect key="frame" x="352" y="17" width="46" height="30"/>
                                         <state key="normal" title="見せる"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -41,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujo-pT-MFc">
-                                        <rect key="frame" x="16" y="8" width="61" height="48"/>
+                                        <rect key="frame" x="16" y="17" width="31" height="30"/>
                                         <state key="normal" title="話す"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -60,7 +58,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AXM-N3-26P">
-                                <rect key="frame" x="16" y="130" width="992" height="1156"/>
+                                <rect key="frame" x="16" y="132.5" width="382" height="649.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -94,22 +92,63 @@
                     <connections>
                         <outlet property="speechButton" destination="ujo-pT-MFc" id="ogK-eo-3xz"/>
                         <outlet property="textView" destination="AXM-N3-26P" id="CZf-0I-Wq1"/>
+                        <segue destination="X93-nV-dMU" kind="show" identifier="textList" id="EDn-KY-d6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cw-io-Wdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="-1261"/>
+            <point key="canvasLocation" x="1421" y="-1269"/>
+        </scene>
+        <!--Text List View Controller-->
+        <scene sceneID="M3T-Qs-Q0z">
+            <objects>
+                <viewController id="X93-nV-dMU" customClass="TextListViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4z-fy-zib" customClass="ToolBar" customModule="NXDrawKit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wNn-7V-VWG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="QYc-42-klW">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QYc-42-klW" id="CZY-aH-MXm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oed-Bc-WVX" firstAttribute="bottom" secondItem="wNn-7V-VWG" secondAttribute="bottom" id="0fL-If-Oww"/>
+                            <constraint firstItem="wNn-7V-VWG" firstAttribute="top" secondItem="Oed-Bc-WVX" secondAttribute="top" id="FVh-TJ-vNh"/>
+                            <constraint firstItem="wNn-7V-VWG" firstAttribute="leading" secondItem="Oed-Bc-WVX" secondAttribute="leading" id="MNk-bd-RPn"/>
+                            <constraint firstItem="Oed-Bc-WVX" firstAttribute="trailing" secondItem="wNn-7V-VWG" secondAttribute="trailing" id="ZKR-kN-LKD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oed-Bc-WVX"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wNn-7V-VWG" id="v3C-dK-a5L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hS-lq-GUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2254.6875" y="-1269.3997071742313"/>
         </scene>
         <!--描いて伝える-->
         <scene sceneID="TqL-Fo-sLl">
             <objects>
                 <viewController title="描いて伝える" id="wNf-5Z-ZPD" customClass="DrawingViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsI-ZE-rmd">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-1r-WgM">
-                                <rect key="frame" x="917" y="1320" width="91" height="30"/>
+                                <rect key="frame" x="352" y="816" width="46" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -118,7 +157,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-UB-i2f">
-                                <rect key="frame" x="917" y="1320" width="91" height="30"/>
+                                <rect key="frame" x="352" y="816" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FOD-ks-AXq"/>
                                 </constraints>
@@ -131,7 +170,7 @@
                                 </connections>
                             </button>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhW-Hc-BU6">
-                                <rect key="frame" x="16" y="1320" width="61" height="30"/>
+                                <rect key="frame" x="16" y="816" width="31" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -140,7 +179,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-MT-2k2">
-                                <rect key="frame" x="16" y="1320" width="61" height="30"/>
+                                <rect key="frame" x="16" y="816" width="31" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OeO-2p-SS3"/>
                                 </constraints>
@@ -182,7 +221,7 @@
             <objects>
                 <collectionViewController title="イラストで伝える" id="6YV-ve-l1I" customClass="IllustSelectViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9S1-x3-6uF">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.95708550349999999" blue="0.95056008729999997" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zZ5-k2-OjY">
@@ -230,11 +269,11 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="伝える方法を選びましょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-M9-r2c">
-                                <rect key="frame" x="16" y="86" width="364" height="36"/>
+                                <rect key="frame" x="16" y="104" width="208" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -243,16 +282,16 @@
                                 </variation>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-bc-rCe">
-                                <rect key="frame" x="0.0" y="130" width="1024" height="1236"/>
+                                <rect key="frame" x="0.0" y="132.5" width="414" height="729.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsx-PS-hqh">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1236"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="729.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-hh-jPP">
-                                                <rect key="frame" x="16" y="16" width="461" height="461"/>
+                                                <rect key="frame" x="16" y="16" width="186.5" height="186.5"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsf-Da-vaM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="461" height="461"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="186.5"/>
                                                         <state key="normal" image="buttonText"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -264,7 +303,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章で伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5b-NA-F8p">
-                                                        <rect key="frame" x="8" y="8" width="445" height="36"/>
+                                                        <rect key="frame" x="8" y="8" width="170.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -297,10 +336,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyW-Xf-9fu">
-                                                <rect key="frame" x="547" y="16" width="461" height="461"/>
+                                                <rect key="frame" x="211.5" y="16" width="186.5" height="186.5"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-iy-22n">
-                                                        <rect key="frame" x="0.0" y="0.0" width="461" height="461"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="186.5"/>
                                                         <state key="normal" image="buttonIllust"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -312,7 +351,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="イラストで伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vm-p0-PYo">
-                                                        <rect key="frame" x="8" y="8" width="445" height="36"/>
+                                                        <rect key="frame" x="8" y="8" width="170.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -345,10 +384,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-2c-wWq">
-                                                <rect key="frame" x="16" y="493" width="461" height="460.5"/>
+                                                <rect key="frame" x="16" y="218.5" width="186.5" height="186"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-VK-R0p">
-                                                        <rect key="frame" x="0.0" y="0.0" width="461" height="460.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="186"/>
                                                         <state key="normal" image="buttonDrawing"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -360,7 +399,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描いて伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjB-O1-vk9">
-                                                        <rect key="frame" x="8" y="8" width="445" height="36"/>
+                                                        <rect key="frame" x="8" y="8" width="170.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -393,10 +432,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QlF-Ix-PUG">
-                                                <rect key="frame" x="547" y="493" width="461" height="460.5"/>
+                                                <rect key="frame" x="211.5" y="218.5" width="186.5" height="186"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4Z-1K-lgP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="461" height="460.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="186"/>
                                                         <state key="normal" image="buttonTemplate"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -408,7 +447,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定型文で伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvR-MN-pux">
-                                                        <rect key="frame" x="8" y="8" width="445" height="36"/>
+                                                        <rect key="frame" x="8" y="8" width="170.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -497,25 +536,25 @@
             <objects>
                 <viewController id="SdM-hn-961" customClass="TemplatesViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G4u-8Z-8SC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fG5-nx-VKj">
-                                <rect key="frame" x="0.0" y="70" width="1024" height="1074"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="uYO-ms-hVV">
-                                        <rect key="frame" x="0.0" y="28" width="1024" height="52"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uYO-ms-hVV" id="ct9-qM-4rF">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="51.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmY-0z-HKo">
-                                <rect key="frame" x="16" y="1152" width="992" height="150"/>
+                                <rect key="frame" x="16" y="648" width="382" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="iKu-41-7x9"/>
@@ -532,10 +571,10 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-Eb-reI">
-                                <rect key="frame" x="0.0" y="1302" width="1024" height="64"/>
+                                <rect key="frame" x="0.0" y="798" width="414" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du7-G3-yI4">
-                                        <rect key="frame" x="917" y="8" width="91" height="48"/>
+                                        <rect key="frame" x="352" y="17" width="46" height="30"/>
                                         <state key="normal" title="見せる"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -545,7 +584,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-BR-GxL">
-                                        <rect key="frame" x="481.5" y="8" width="61" height="48"/>
+                                        <rect key="frame" x="191.5" y="17" width="31" height="30"/>
                                         <state key="normal" title="消す"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -555,7 +594,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EX-Ph-HSr">
-                                        <rect key="frame" x="16" y="8" width="61" height="48"/>
+                                        <rect key="frame" x="16" y="17" width="31" height="30"/>
                                         <state key="normal" title="話す"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -606,7 +645,7 @@
             <objects>
                 <navigationController id="zqX-Hp-Pp8" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EAR-3H-jj2">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.80000000000000004" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -620,10 +659,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buttonDrawing" width="384" height="384"/>
-        <image name="buttonIllust" width="384" height="384"/>
-        <image name="buttonTemplate" width="384" height="384"/>
-        <image name="buttonText" width="384" height="384"/>
-        <image name="face2" width="330" height="324"/>
+        <image name="buttonDrawing" width="512" height="512"/>
+        <image name="buttonIllust" width="512" height="512"/>
+        <image name="buttonTemplate" width="512" height="512"/>
+        <image name="buttonText" width="512" height="512"/>
+        <image name="face2" width="110" height="108"/>
     </resources>
 </document>
