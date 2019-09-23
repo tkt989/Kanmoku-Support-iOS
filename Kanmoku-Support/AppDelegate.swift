@@ -28,8 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
-        
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
