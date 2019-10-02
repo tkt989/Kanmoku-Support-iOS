@@ -73,9 +73,9 @@ class WritingViewController: UIViewController, WritingViewProtocol {
             return
         }
         
-        var textList = UserDefaults.standard.array(forKey: "TEXT_LIST") ?? []
-        textList.append(self.textView.text)
-        UserDefaults.standard.set(textList, forKey: "TEXT_LIST")
+        var textList: [Text] =  try! (JSONDecoder().decode([Text].self, from: (UserDefaults.standard.data(forKey: "TEXT_LIST") ?? Data()))) ?? []
+        textList.append(Text(content: self.textView.text, date: Date()))
+        UserDefaults.standard.set(try! JSONEncoder().encode(textList), forKey: "TEXT_LIST")
         
         let alert = UIAlertController(title: "保存しました。", message: "「一覧」から保存した文章を読み出すことができます", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)

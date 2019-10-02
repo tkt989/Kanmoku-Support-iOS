@@ -8,24 +8,40 @@
 
 import UIKit
 
-class TextListViewController: UIViewController {
+class TextListViewController: UIViewController, TextListViewProtocol {
     var listener: ((String) -> Void)?
 
-    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var typeButton: UIButton!
+    @IBOutlet weak var orderButton: UIButton!
     
-    var textList: [String] = []
+    private var presenter: TextListPresenterProtocol!
+    private var origin: CGAffineTransform!
+    
+    var textList: [Text] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.textList = (UserDefaults.standard.array(forKey: "TEXT_LIST") as? [String]) ?? []
-
-        self.tableView.dataSource = self
+        self.origin = self.orderButton.transform.rotated(by: 0.0)
+        
+        self.presenter = TextListPresenter(self)
+        
+        self.tableView.dataSource = self.presenter
         self.tableView.delegate = self
+        
+        self.orderButton.imageView?.contentMode = .scaleAspectFit
         
         let edit = UIBarButtonItem(title: "編集", style: .plain, target: self, action: #selector(clickEdit(_:)))
         self.navigationItem.rightBarButtonItem = edit
+    }
+    
+    @IBAction func typeClick(_ sender: Any) {
+        self.presenter.onTypeClick()
+    }
+    
+    @IBAction func orderClick(_ sender: Any) {
+        self.presenter.onOrderClick()
     }
     
     @objc private func clickEdit(_ sender: UIBarButtonItem) {
@@ -38,51 +54,37 @@ class TextListViewController: UIViewController {
         }
     }
     
-    private func save() {
-        UserDefaults.standard.set(self.textList, forKey: "TEXT_LIST")
+    func updateType(_ type: Type) {
+        if type == Type.recent {
+            self.typeButton.setTitle("最近", for: .normal)
+        } else {
+            self.typeButton.setTitle("文字", for: .normal)
+        }
     }
-}
+    
+    func updateOrder(_ order: Order) {
+        if order == Order.asc {
 
-extension TextListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            self.orderButton.transform = self.origin
+        } else {
+            self.orderButton.transform = self.origin.rotated(by: .pi)
+        }
+    }
+    
+    func refreshTextList() {
+        self.tableView.reloadData()
+    }
+    
+    func back(_ text: String) {
         if let _listener = self.listener {
-            _listener(textList[indexPath.row])
+            _listener(text)
         }
         self.navigationController?.popViewController(animated: true)
     }
 }
 
-extension TextListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = textList[indexPath.row].replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression, range: nil)
-        return cell!
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return textList.count
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        textList.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-        self.save()
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        self.textList.swapAt(sourceIndexPath.row, destinationIndexPath.row)
-        self.save()
+extension TextListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.onTextClick(indexPath.row)
     }
 }
