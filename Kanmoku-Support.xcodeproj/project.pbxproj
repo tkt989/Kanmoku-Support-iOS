@@ -15,6 +15,8 @@
 		16498DA020849D0900332403 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498D9F20849D0900332403 /* DrawingViewController.swift */; };
 		16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA12084A34500332403 /* ShowDrawingViewController.swift */; };
 		16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16498DA22084A34500332403 /* ShowDrawingViewController.xib */; };
+		165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165B3DCF2340F3F7005D8672 /* TextListContract.swift */; };
+		165B3DD22340F46B005D8672 /* TextListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165B3DD12340F46B005D8672 /* TextListPresenter.swift */; };
 		167872B621849CE400BD2902 /* TemplatesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167872B521849CE400BD2902 /* TemplatesContract.swift */; };
 		167872BA2184A49700BD2902 /* TemplatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167872B92184A49700BD2902 /* TemplatesViewController.swift */; };
 		1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690D9FA207F92A80096B23C /* AppDelegate.swift */; };
@@ -66,6 +68,8 @@
 		16498D9F20849D0900332403 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA12084A34500332403 /* ShowDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA22084A34500332403 /* ShowDrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDrawingViewController.xib; sourceTree = "<group>"; };
+		165B3DCF2340F3F7005D8672 /* TextListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListContract.swift; sourceTree = "<group>"; };
+		165B3DD12340F46B005D8672 /* TextListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListPresenter.swift; sourceTree = "<group>"; };
 		167872B521849CE400BD2902 /* TemplatesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesContract.swift; sourceTree = "<group>"; };
 		167872B92184A49700BD2902 /* TemplatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesViewController.swift; sourceTree = "<group>"; };
 		1690D9F7207F92A80096B23C /* Kanmoku-Support.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanmoku-Support.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				16EFE8B02332785F000B6D95 /* TextListViewController.swift */,
+				165B3DCF2340F3F7005D8672 /* TextListContract.swift */,
+				165B3DD12340F46B005D8672 /* TextListPresenter.swift */,
 			);
 			path = TextList;
 			sourceTree = "<group>";
@@ -497,7 +503,9 @@
 				167872B621849CE400BD2902 /* TemplatesContract.swift in Sources */,
 				1646A9B8218DF8A000A2E301 /* TemplatesPresenter.swift in Sources */,
 				16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */,
+				165B3DD22340F46B005D8672 /* TextListPresenter.swift in Sources */,
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
+				165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */,
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
 				16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
@@ -570,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -630,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
