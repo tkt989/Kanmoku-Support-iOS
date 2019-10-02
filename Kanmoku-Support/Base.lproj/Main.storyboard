@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wNn-7V-VWG">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="QYc-42-klW">
@@ -121,23 +121,49 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-4s-fFt">
+                                <rect key="frame" x="313" y="96" width="37" height="34"/>
+                                <state key="normal" title="最近">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="typeClick:" destination="X93-nV-dMU" eventType="touchUpInside" id="sll-Xr-9m8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-08-0mJ">
+                                <rect key="frame" x="366" y="96" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Skm-cH-xwl"/>
+                                    <constraint firstAttribute="height" constant="32" id="h8e-wu-L80"/>
+                                </constraints>
+                                <state key="normal" image="arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="orderClick:" destination="X93-nV-dMU" eventType="touchUpInside" id="SyS-2L-uAU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Oed-Bc-WVX" firstAttribute="bottom" secondItem="wNn-7V-VWG" secondAttribute="bottom" id="0fL-If-Oww"/>
-                            <constraint firstItem="wNn-7V-VWG" firstAttribute="top" secondItem="Oed-Bc-WVX" secondAttribute="top" id="FVh-TJ-vNh"/>
-                            <constraint firstItem="wNn-7V-VWG" firstAttribute="leading" secondItem="Oed-Bc-WVX" secondAttribute="leading" id="MNk-bd-RPn"/>
-                            <constraint firstItem="Oed-Bc-WVX" firstAttribute="trailing" secondItem="wNn-7V-VWG" secondAttribute="trailing" id="ZKR-kN-LKD"/>
+                            <constraint firstItem="aCJ-08-0mJ" firstAttribute="top" secondItem="Oed-Bc-WVX" secondAttribute="top" constant="8" id="2FE-8J-UHH"/>
+                            <constraint firstItem="aCJ-08-0mJ" firstAttribute="leading" secondItem="5yS-4s-fFt" secondAttribute="trailing" constant="16" id="2fm-8v-HlV"/>
+                            <constraint firstItem="Oed-Bc-WVX" firstAttribute="trailing" secondItem="aCJ-08-0mJ" secondAttribute="trailing" constant="16" id="AKm-7g-knr"/>
+                            <constraint firstItem="Oed-Bc-WVX" firstAttribute="bottom" secondItem="wNn-7V-VWG" secondAttribute="bottom" id="AkN-ig-QZH"/>
+                            <constraint firstItem="5yS-4s-fFt" firstAttribute="top" secondItem="Oed-Bc-WVX" secondAttribute="top" constant="8" id="PP2-m8-40w"/>
+                            <constraint firstItem="wNn-7V-VWG" firstAttribute="top" secondItem="5yS-4s-fFt" secondAttribute="bottom" constant="8" id="ZDT-gl-Ym7"/>
+                            <constraint firstItem="Oed-Bc-WVX" firstAttribute="trailing" secondItem="wNn-7V-VWG" secondAttribute="trailing" id="ins-By-clw"/>
+                            <constraint firstItem="wNn-7V-VWG" firstAttribute="leading" secondItem="Oed-Bc-WVX" secondAttribute="leading" id="xT6-QH-lhZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oed-Bc-WVX"/>
                     </view>
                     <connections>
+                        <outlet property="orderButton" destination="aCJ-08-0mJ" id="ITZ-IO-JJW"/>
                         <outlet property="tableView" destination="wNn-7V-VWG" id="v3C-dK-a5L"/>
+                        <outlet property="typeButton" destination="5yS-4s-fFt" id="BBW-NL-8QU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hS-lq-GUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254.6875" y="-1269.3997071742313"/>
+            <point key="canvasLocation" x="2253.6231884057975" y="-1269.6428571428571"/>
         </scene>
         <!--描いて伝える-->
         <scene sceneID="TqL-Fo-sLl">
@@ -659,6 +685,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down" catalog="system" width="58" height="64"/>
         <image name="buttonDrawing" width="512" height="512"/>
         <image name="buttonIllust" width="512" height="512"/>
         <image name="buttonTemplate" width="512" height="512"/>
