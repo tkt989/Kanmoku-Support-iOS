@@ -15,6 +15,8 @@
 		16498DA020849D0900332403 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498D9F20849D0900332403 /* DrawingViewController.swift */; };
 		16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA12084A34500332403 /* ShowDrawingViewController.swift */; };
 		16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16498DA22084A34500332403 /* ShowDrawingViewController.xib */; };
+		1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655B44A234A097A00BBA8D4 /* Extension.swift */; };
+		1655B450234A0A7D00BBA8D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1655B452234A0A7D00BBA8D4 /* Localizable.strings */; };
 		165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165B3DCF2340F3F7005D8672 /* TextListContract.swift */; };
 		165B3DD22340F46B005D8672 /* TextListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165B3DD12340F46B005D8672 /* TextListPresenter.swift */; };
 		167872B621849CE400BD2902 /* TemplatesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167872B521849CE400BD2902 /* TemplatesContract.swift */; };
@@ -68,6 +70,8 @@
 		16498D9F20849D0900332403 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA12084A34500332403 /* ShowDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingViewController.swift; sourceTree = "<group>"; };
 		16498DA22084A34500332403 /* ShowDrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDrawingViewController.xib; sourceTree = "<group>"; };
+		1655B44A234A097A00BBA8D4 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1655B453234A0AAE00BBA8D4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		165B3DCF2340F3F7005D8672 /* TextListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListContract.swift; sourceTree = "<group>"; };
 		165B3DD12340F46B005D8672 /* TextListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListPresenter.swift; sourceTree = "<group>"; };
 		167872B521849CE400BD2902 /* TemplatesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesContract.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 		1690D9F9207F92A80096B23C /* Kanmoku-Support */ = {
 			isa = PBXGroup;
 			children = (
+				1655B44A234A097A00BBA8D4 /* Extension.swift */,
 				16DA4F7E2167C9CB00C86180 /* UI */,
 				16BE8C2A2081F7280041602C /* Model */,
 				16BE8C232081E6E80041602C /* ViewController */,
@@ -217,6 +222,7 @@
 				1690DA03207F92A90096B23C /* LaunchScreen.storyboard */,
 				1690DA06207F92A90096B23C /* Info.plist */,
 				16BE8C35208264B40041602C /* Settings.bundle */,
+				1655B452234A0A7D00BBA8D4 /* Localizable.strings */,
 			);
 			path = "Kanmoku-Support";
 			sourceTree = "<group>";
@@ -402,11 +408,11 @@
 			};
 			buildConfigurationList = 1690D9F2207F92A80096B23C /* Build configuration list for PBXProject "Kanmoku-Support" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ja,
 			);
 			mainGroup = 1690D9EE207F92A80096B23C;
 			productRefGroup = 1690D9F8207F92A80096B23C /* Products */;
@@ -429,6 +435,7 @@
 				16BE8C292081E9C70041602C /* TextShowViewController.xib in Resources */,
 				16BE8C3420825C380041602C /* IllustShowViewController.xib in Resources */,
 				1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */,
+				1655B450234A0A7D00BBA8D4 /* Localizable.strings in Resources */,
 				1690DA02207F92A90096B23C /* Assets.xcassets in Resources */,
 				16BE8C36208264B40041602C /* Settings.bundle in Resources */,
 				16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */,
@@ -541,6 +548,7 @@
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
 				16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
+				1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */,
 				167872BA2184A49700BD2902 /* TemplatesViewController.swift in Sources */,
 				16BE8C2C2081F7490041602C /* TTS.swift in Sources */,
 				16498DA020849D0900332403 /* DrawingViewController.swift in Sources */,
@@ -587,6 +595,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1655B452234A0A7D00BBA8D4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1655B453234A0AAE00BBA8D4 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		1690D9FE207F92A80096B23C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

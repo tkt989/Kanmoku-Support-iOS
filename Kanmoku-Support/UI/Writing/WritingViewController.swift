@@ -39,8 +39,8 @@ class WritingViewController: UIViewController, WritingViewProtocol {
     }
     
     private func setupNavigationItems() {
-        let save = UIBarButtonItem(title: "保存", style: .plain, target: self, action: #selector(saveText(_:)))
-        let textList = UIBarButtonItem(title: "一覧", style: .plain, target: self, action: #selector(textListClicked(_:)))
+        let save = UIBarButtonItem(title: from("Save"), style: .plain, target: self, action: #selector(saveText(_:)))
+        let textList = UIBarButtonItem(title: from("List"), style: .plain, target: self, action: #selector(textListClicked(_:)))
         self.navigationItem.rightBarButtonItems = [textList, save]
     }
     
@@ -66,7 +66,7 @@ class WritingViewController: UIViewController, WritingViewProtocol {
     
     @objc private func saveText(_ sender: UIButton) {
         if self.textView.text.isBlank {
-            let alert = UIAlertController(title: "保存できません", message: "空の文章は保存できません", preferredStyle: .alert)
+            let alert = UIAlertController(title: from("CanNotSave"), message: from("CanNotSaveEmpty"), preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
@@ -77,7 +77,7 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         textList.append(Text(content: self.textView.text, date: Date()))
         UserDefaults.standard.set(try! JSONEncoder().encode(textList), forKey: "TEXT_LIST")
         
-        let alert = UIAlertController(title: "保存しました。", message: "「一覧」から保存した文章を読み出すことができます", preferredStyle: .alert)
+        let alert = UIAlertController(title: from("Saved"), message: from("SavedMessage"), preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)

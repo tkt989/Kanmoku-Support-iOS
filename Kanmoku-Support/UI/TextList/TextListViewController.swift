@@ -48,17 +48,17 @@ class TextListViewController: UIViewController, TextListViewProtocol {
         self.tableView.isEditing = !self.tableView.isEditing
         
         if (self.tableView.isEditing) {
-            self.navigationItem.rightBarButtonItem?.title = "終了"
+            self.navigationItem.rightBarButtonItem?.title = from("Finish")
         } else {
-            self.navigationItem.rightBarButtonItem?.title = "編集"
+            self.navigationItem.rightBarButtonItem?.title = from("Edit")
         }
     }
     
     func updateType(_ type: Type) {
         if type == Type.recent {
-            self.typeButton.setTitle("最近", for: .normal)
+            self.typeButton.setTitle(from("Recent"), for: .normal)
         } else {
-            self.typeButton.setTitle("文字", for: .normal)
+            self.typeButton.setTitle(from("Char"), for: .normal)
         }
     }
     

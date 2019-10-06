@@ -1,0 +1,19 @@
+/*
+  Localizable.strings
+  Kanmoku-Support
+
+  Created by tkt989 on 2019/10/06.
+  Copyright © 2019 tkt989. All rights reserved.
+*/
+
+"Finish" = "終了";
+"Edit" = "編集";
+"Save" = "保存";
+"List" = "一覧";
+"Recent" = "最近";
+"Char" = "文字";
+
+"Saved" = "保存しました";
+"SavedMessage" = "「一覧」から保存した文章を読み出すことができます";
+"CanNotSave" = "保存できません";
+"CanNotSaveEmpty" = "空の文章は保存できません";
