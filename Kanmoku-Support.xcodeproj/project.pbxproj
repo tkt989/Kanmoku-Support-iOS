@@ -135,6 +135,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1655B4362349D46F00BBA8D4 /* TextShow */ = {
+			isa = PBXGroup;
+			children = (
+				16BE8C262081E9C70041602C /* TextShowViewController.swift */,
+				16BE8C272081E9C70041602C /* TextShowViewController.xib */,
+			);
+			path = TextShow;
+			sourceTree = "<group>";
+		};
+		1655B4372349D7C500BBA8D4 /* IllustSelect */ = {
+			isa = PBXGroup;
+			children = (
+				16BE8C2D20823E070041602C /* IllustSelectViewController.swift */,
+				16BE8C2F20823F470041602C /* IllustCell.swift */,
+				16BE8C3120825C380041602C /* IllustShowViewController.swift */,
+				16BE8C3220825C380041602C /* IllustShowViewController.xib */,
+			);
+			path = IllustSelect;
+			sourceTree = "<group>";
+		};
+		1655B4382349D7D600BBA8D4 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				16498D9F20849D0900332403 /* DrawingViewController.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		1655B4392349D7E200BBA8D4 /* ShowDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				16498DA12084A34500332403 /* ShowDrawingViewController.swift */,
+				16498DA22084A34500332403 /* ShowDrawingViewController.xib */,
+			);
+			path = ShowDrawing;
+			sourceTree = "<group>";
+		};
 		167872B421849C3F00BD2902 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,15 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				1690D9FC207F92A80096B23C /* ViewController.swift */,
-				16BE8C262081E9C70041602C /* TextShowViewController.swift */,
-				16BE8C272081E9C70041602C /* TextShowViewController.xib */,
-				16BE8C2D20823E070041602C /* IllustSelectViewController.swift */,
-				16BE8C2F20823F470041602C /* IllustCell.swift */,
-				16BE8C3120825C380041602C /* IllustShowViewController.swift */,
-				16BE8C3220825C380041602C /* IllustShowViewController.xib */,
-				16498D9F20849D0900332403 /* DrawingViewController.swift */,
-				16498DA12084A34500332403 /* ShowDrawingViewController.swift */,
-				16498DA22084A34500332403 /* ShowDrawingViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -232,6 +260,10 @@
 		16DA4F7E2167C9CB00C86180 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1655B4392349D7E200BBA8D4 /* ShowDrawing */,
+				1655B4382349D7D600BBA8D4 /* Drawing */,
+				1655B4372349D7C500BBA8D4 /* IllustSelect */,
+				1655B4362349D46F00BBA8D4 /* TextShow */,
 				16EFE8A7232FDBA9000B6D95 /* TextList */,
 				167872B421849C3F00BD2902 /* Templates */,
 				16DA4F7F2167C9E500C86180 /* Writing */,
