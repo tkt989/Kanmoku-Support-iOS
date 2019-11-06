@@ -73,7 +73,7 @@ class WritingViewController: UIViewController, WritingViewProtocol {
             return
         }
         
-        var textList: [Text] =  try! (JSONDecoder().decode([Text].self, from: (UserDefaults.standard.data(forKey: "TEXT_LIST") ?? Data()))) ?? []
+        var textList: [Text] =  (try? JSONDecoder().decode([Text].self, from: UserDefaults.standard.data(forKey: "TEXT_LIST") ?? Data())) ?? []
         textList.append(Text(content: self.textView.text, date: Date()))
         UserDefaults.standard.set(try! JSONEncoder().encode(textList), forKey: "TEXT_LIST")
         
