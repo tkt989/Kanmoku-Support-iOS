@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextShowViewController" customModule="Kanmoku_Support" customModuleProvider="target">
             <connections>
-                <outlet property="label" destination="hRW-ai-zxm" id="ioR-Sk-g5d"/>
+                <outlet property="textView" destination="Hj0-d8-EtJ" id="m6F-BW-rDv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,15 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRW-ai-zxm">
-                    <rect key="frame" x="16" y="16" width="992" height="1296"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="heightClass=regular-widthClass=regular">
-                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                    </variation>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpI-vL-FGO">
                     <rect key="frame" x="481.5" y="1320" width="61" height="30"/>
                     <constraints>
@@ -42,18 +33,25 @@
                         <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="EAe-gj-K3n"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Test" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-d8-EtJ">
+                    <rect key="frame" x="16" y="16" width="992" height="1296"/>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="OpI-vL-FGO" firstAttribute="top" secondItem="hRW-ai-zxm" secondAttribute="bottom" constant="8" id="HlF-K4-SSi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hRW-ai-zxm" secondAttribute="trailing" constant="16" id="Tlv-vd-gtS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hj0-d8-EtJ" secondAttribute="trailing" constant="16" id="51d-3D-oCR"/>
+                <constraint firstItem="Hj0-d8-EtJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Eeu-71-xt0"/>
+                <constraint firstItem="Hj0-d8-EtJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LIs-kS-fXR"/>
+                <constraint firstItem="OpI-vL-FGO" firstAttribute="top" secondItem="Hj0-d8-EtJ" secondAttribute="bottom" constant="8" id="MdM-KD-bgN"/>
                 <constraint firstItem="OpI-vL-FGO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hNa-gu-CMm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OpI-vL-FGO" secondAttribute="bottom" constant="16" id="hxi-al-mBq"/>
-                <constraint firstItem="hRW-ai-zxm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="kmf-Cl-1D3"/>
-                <constraint firstItem="hRW-ai-zxm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="zXd-JS-qh4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="32.5" y="59.5"/>
+            <point key="canvasLocation" x="32.2265625" y="59.297218155197655"/>
         </view>
     </objects>
 </document>

@@ -57,6 +57,7 @@ class WritingViewController: UIViewController, WritingViewProtocol {
     @IBAction func tapShowText(_ sender: UIButton) {
         let vc = TextShowViewController()
         vc.text = self.textView.text
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
     

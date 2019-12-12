@@ -8,19 +8,23 @@
 
 import UIKit
 
-class TextShowViewController: UIViewController {
+class TextShowViewController: UIViewController, UITextViewDelegate {
     public var text: String!
-    
-    @IBOutlet weak var label: UILabel!
-    
+    @IBOutlet var textView: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        label.text = self.text
+        textView.text = text
+
+        if Settings.sharedInstance.isReverseShow {
+            textView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        }
+        textView.delegate = self
         
-        if (Settings.sharedInstance.isReverseShow) {
-            label.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.textView.centerVertically()
         }
     }
 
@@ -28,9 +32,12 @@ class TextShowViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @IBAction func dismiss(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
+    
+    func textViewDidChange(_ textView: UITextView) {
+        self.textView.centerVertically()
+    }
 }
