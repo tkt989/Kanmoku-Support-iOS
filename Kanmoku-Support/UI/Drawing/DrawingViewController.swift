@@ -35,6 +35,7 @@ class DrawingViewController: UIViewController {
     @IBAction func showDrawing(_ sender: UIButton) {
         let vc = ShowDrawingViewController()
         vc.image = image
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
     
