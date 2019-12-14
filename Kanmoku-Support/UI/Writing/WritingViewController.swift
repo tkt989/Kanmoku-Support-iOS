@@ -74,9 +74,9 @@ class WritingViewController: UIViewController, WritingViewProtocol {
             return
         }
         
-        var textList: [Text] =  (try? JSONDecoder().decode([Text].self, from: UserDefaults.standard.data(forKey: "TEXT_LIST") ?? Data())) ?? []
+        var textList: [Text] = TextService.shared.textList() ?? []
         textList.append(Text(content: self.textView.text, date: Date()))
-        UserDefaults.standard.set(try! JSONEncoder().encode(textList), forKey: "TEXT_LIST")
+        TextService.shared.saveTextList(value: textList)
         
         let alert = UIAlertController(title: from("Saved"), message: from("SavedMessage"), preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)

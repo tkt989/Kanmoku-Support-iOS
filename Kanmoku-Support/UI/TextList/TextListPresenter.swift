@@ -9,21 +9,6 @@
 import Foundation
 import UIKit
 
-struct Text: Codable {
-    public var content: String
-    public var date: Date
-}
-
-enum Type: String, Codable {
-    case recent
-    case text
-}
-
-enum Order: String, Codable {
-    case asc
-    case desc
-}
-
 class TextListPresenter: NSObject, TextListPresenterProtocol {
     private var view: TextListViewProtocol!
     private var textList: [Text]!
@@ -33,9 +18,9 @@ class TextListPresenter: NSObject, TextListPresenterProtocol {
     required init(_ view: TextListViewProtocol) {
         super.init()
         self.view = view
-        self.textList = (try? JSONDecoder().decode([Text].self, from: UserDefaults.standard.data(forKey: "TEXT_LIST") ?? Data())) ?? []
-        self.type = (try? JSONDecoder().decode(Type.self, from: UserDefaults.standard.data(forKey: "TYPE") ?? Data())) ?? Type.recent
-        self.order = (try? JSONDecoder().decode(Order.self, from: UserDefaults.standard.data(forKey: "ORDER") ?? Data())) ?? Order.asc
+        self.textList = TextService.shared.textList() ?? []
+        self.type = TextService.shared.type() ?? Type.recent
+        self.order = TextService.shared.order() ?? Order.asc
         
         self.updateTextList()
         self.view.updateType(self.type)
@@ -43,9 +28,9 @@ class TextListPresenter: NSObject, TextListPresenterProtocol {
     }
     
     private func save() {
-        UserDefaults.standard.set(try! JSONEncoder().encode(self.textList), forKey: "TEXT_LIST")
-        UserDefaults.standard.set(try! JSONEncoder().encode(self.type), forKey: "TYPE")
-        UserDefaults.standard.set(try! JSONEncoder().encode(self.order), forKey: "ORDER")
+        TextService.shared.saveTextList(value: self.textList)
+        TextService.shared.saveType(value: self.type)
+        TextService.shared.saveOrder(value: self.order)
     }
     
     private func updateTextList() {

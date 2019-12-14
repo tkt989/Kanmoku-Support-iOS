@@ -1,4 +1,5 @@
 PODS:
+  - DefaultsKit (0.2.0)
   - Firebase/Analytics (6.9.0):
     - Firebase/Core
   - Firebase/Core (6.9.0):
@@ -66,6 +67,7 @@ PODS:
   - NXDrawKit (0.6.1)
 
 DEPENDENCIES:
+  - DefaultsKit
   - Firebase/Analytics
   - NXDrawKit
 
@@ -73,6 +75,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - NXDrawKit
   trunk:
+    - DefaultsKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -86,6 +89,7 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
+  DefaultsKit: 6c767941b2c3fe34c4d70e300e6c3b80c94964dd
   Firebase: 2d750c54cda57d5a6ae31212cfe5cc813c6be7e4
   FirebaseAnalytics: 5d9ccbf46ed25d3ec9304d263f85bddf1e93e2d2
   FirebaseCore: 8b2765c445d40db7137989b7146a3aa3f91b5529
@@ -99,6 +103,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NXDrawKit: a287045ea335673d6e1e693d80d44073d8726514
 
-PODFILE CHECKSUM: 977dc28512adf0ff874d25fa65e1325b477bfddf
+PODFILE CHECKSUM: 5c63f06c4446576f0a0ffb0500754028bc808d62
 
 COCOAPODS: 1.8.4

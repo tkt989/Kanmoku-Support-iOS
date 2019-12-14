@@ -6,7 +6,7 @@ target 'Kanmoku-Support' do
   use_frameworks!
   pod 'NXDrawKit'
   pod 'Firebase/Analytics'
-
+  pod 'DefaultsKit'
 
   # Pods for Kanmoku-Support
 
