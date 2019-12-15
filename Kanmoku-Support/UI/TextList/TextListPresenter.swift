@@ -84,7 +84,13 @@ class TextListPresenter: NSObject, TextListPresenterProtocol {
 extension TextListPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = textList[indexPath.row].content.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression, range: nil)
+        let text = self.textList[indexPath.row].content
+        
+        let (title, detail) = self.splitTitleDetail(text: text)
+        cell?.textLabel?.text = title.oneLine()
+        cell?.textLabel?.font = UIFont.boldSystemFont(ofSize: cell?.textLabel?.font?.pointSize ?? 20.0)
+        cell?.detailTextLabel?.text = detail.oneLine()
+
         return cell!
     }
     
@@ -113,5 +119,12 @@ extension TextListPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         self.textList.swapAt(sourceIndexPath.row, destinationIndexPath.row)
         self.save()
+    }
+    
+    private func splitTitleDetail(text: String) -> (String, String) {
+        let splitted = text.split(separator: "\n")
+        let title = String(splitted[0])
+        let detail = splitted.dropFirst(1).joined(separator: "\n")
+        return (title, detail)
     }
 }

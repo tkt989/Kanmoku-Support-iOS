@@ -46,6 +46,7 @@
 		16EFE8B12332785F000B6D95 /* TextListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EFE8B02332785F000B6D95 /* TextListViewController.swift */; };
 		16F71D9823A2718900A6A039 /* UITextView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F71D9723A2718900A6A039 /* UITextView+extension.swift */; };
 		16F71D9A23A53E7200A6A039 /* TextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F71D9923A53E7200A6A039 /* TextService.swift */; };
+		16F71D9C23A546EA00A6A039 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F71D9B23A546EA00A6A039 /* String+extension.swift */; };
 		5420FAEC9331CEBC66579A99 /* Pods_Kanmoku_SupportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */; };
 		5A6AEAD81DD9B8177971938F /* Pods_Kanmoku_Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383B4C8527131A61DA8192FD /* Pods_Kanmoku_Support.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		16EFE8B02332785F000B6D95 /* TextListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListViewController.swift; sourceTree = "<group>"; };
 		16F71D9723A2718900A6A039 /* UITextView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+extension.swift"; sourceTree = "<group>"; };
 		16F71D9923A53E7200A6A039 /* TextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextService.swift; sourceTree = "<group>"; };
+		16F71D9B23A546EA00A6A039 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		172E7894D134034A4E891C1D /* Pods-Kanmoku-SupportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportTests/Pods-Kanmoku-SupportTests.release.xcconfig"; sourceTree = "<group>"; };
 		261182AE04FDD1D837D0FBFC /* Pods-Kanmoku-SupportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanmoku-SupportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanmoku-SupportUITests/Pods-Kanmoku-SupportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C9A281E7DEF087278D394C0 /* Pods_Kanmoku_SupportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				16F71D9723A2718900A6A039 /* UITextView+extension.swift */,
+				16F71D9B23A546EA00A6A039 /* String+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */,
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
 				16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */,
+				16F71D9C23A546EA00A6A039 /* String+extension.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
 				1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */,
 				167872BA2184A49700BD2902 /* TemplatesViewController.swift in Sources */,
