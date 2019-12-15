@@ -29,16 +29,21 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(WritingViewController.dismissKeyboard))
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         self.textView.inputAccessoryView = keyboardToolbar
-        self.textView.becomeFirstResponder()
         
         self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         self.textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
         
         if self.text != nil {
             self.textView.text = self.text?.content
+        } else {
+            self.textView.becomeFirstResponder()
         }
         
         self.setupNavigationItems()
+        
+        let notification = NotificationCenter.default
+        notification.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notification.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,6 +104,7 @@ class WritingViewController: UIViewController, WritingViewProtocol {
             textList[index] = self.text!
         } else {
             let text = Text(id: UUID().uuidString, content: self.textView.text, date: Date())
+            self.text = text
             textList.append(text)
         }
         
@@ -116,6 +122,23 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         vc.listener = { text in
             self.textView.text = text
         }
+    }
+    
+    @objc private func keyboardWillShow(notification: Notification?) {
+        let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        let duration: TimeInterval? = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
+        UIView.animate(withDuration: duration!, animations: { () in
+            let transform = CGAffineTransform(translationX: 0, y: -(rect?.size.height)!)
+            self.view.transform = transform
+        })
+    }
+    
+    @objc private func keyboardWillHide(notification: Notification?) {
+        let duration: TimeInterval? = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double
+        UIView.animate(withDuration: duration!, animations: { () in
+
+            self.view.transform = CGAffineTransform.identity
+        })
     }
     
     func startSpeech() {

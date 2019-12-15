@@ -35,6 +35,8 @@ class TextListViewController: UIViewController, TextListViewProtocol {
         let add = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(clickAdd(_:)))
         let edit = UIBarButtonItem(title: "編集", style: .plain, target: self, action: #selector(clickEdit(_:)))
         self.navigationItem.rightBarButtonItems = [add, edit]
+        
+        self.orderButton.setImage(UIImage.fontAwesomeIcon(name: .arrowDown, style: .solid, textColor: .systemBlue, size: CGSize(width: 28, height: 28)), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

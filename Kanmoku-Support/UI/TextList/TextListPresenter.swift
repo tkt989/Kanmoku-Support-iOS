@@ -34,7 +34,7 @@ class TextListPresenter: NSObject, TextListPresenterProtocol {
     }
     
     func updateTextList() {
-        self.textList = TextService.shared.textList()
+        self.textList = TextService.shared.textList() ?? []
         self.textList.sort(by: { (a: Text, b: Text) -> Bool in
             if self.type == Type.text {
                 if self.order == Order.asc {

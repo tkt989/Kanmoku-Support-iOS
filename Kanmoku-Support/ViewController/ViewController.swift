@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var textButton: UIButton!
     @IBOutlet weak var textButtonShadow: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
