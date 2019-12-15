@@ -7,6 +7,8 @@ target 'Kanmoku-Support' do
   pod 'NXDrawKit'
   pod 'Firebase/Analytics'
   pod 'DefaultsKit'
+  pod 'Loaf'
+  pod 'FontAwesome.swift'
 
   # Pods for Kanmoku-Support
 

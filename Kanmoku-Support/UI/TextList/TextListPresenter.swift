@@ -33,7 +33,8 @@ class TextListPresenter: NSObject, TextListPresenterProtocol {
         TextService.shared.saveOrder(value: self.order)
     }
     
-    private func updateTextList() {
+    func updateTextList() {
+        self.textList = TextService.shared.textList()
         self.textList.sort(by: { (a: Text, b: Text) -> Bool in
             if self.type == Type.text {
                 if self.order == Order.asc {
@@ -77,7 +78,7 @@ class TextListPresenter: NSObject, TextListPresenterProtocol {
     func onTextClick(_ index: Int) {
         self.textList[index].date = Date()
         self.save()
-        self.view.back(self.textList[index].content)
+        self.view.back(self.textList[index])
     }
 }
 

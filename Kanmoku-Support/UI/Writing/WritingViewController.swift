@@ -1,4 +1,4 @@
-// 
+//
 //  WritingViewController.swift
 //  Kanmoku-Support
 //
@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import Loaf
+import FontAwesome_swift
 
 class WritingViewController: UIViewController, WritingViewProtocol {
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var speechButton: UIButton!
+    @IBOutlet var textView: UITextView!
+    @IBOutlet var speechButton: UIButton!
+    var text: Text?
+    var savable = false
     private var presenter: WritingPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.presenter = WritingPresenter(self)
-
+        
         // キーボードに完了ボタンを表示する
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
@@ -27,21 +31,34 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         self.textView.inputAccessoryView = keyboardToolbar
         self.textView.becomeFirstResponder()
         
-        self.textView.textContainerInset = UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8)
+        self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         self.textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
+        
+        if self.text != nil {
+            self.textView.text = self.text?.content
+        }
         
         self.setupNavigationItems()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     private func setupNavigationItems() {
-        let save = UIBarButtonItem(title: from("Save"), style: .plain, target: self, action: #selector(saveText(_:)))
-        let textList = UIBarButtonItem(title: from("List"), style: .plain, target: self, action: #selector(textListClicked(_:)))
-        self.navigationItem.rightBarButtonItems = [textList, save]
+        var items: [UIBarButtonItem] = []
+        
+        if self.savable {
+            let icon = UIImage.fontAwesomeIcon(name: .save, style: .solid, textColor: .black, size: CGSize(width: 28, height: 28))
+            let save = UIBarButtonItem(image: icon, style: .plain, target: self, action: #selector(self.saveText(_:)))
+            items.append(save)
+        } else {
+            let icon = UIImage.fontAwesomeIcon(name: .list, style: .solid, textColor: .black, size: CGSize(width: 28, height: 28))
+            let textList = UIBarButtonItem(image: icon, style: .plain, target: self, action: #selector(self.textListClicked(_:)))
+            items.append(textList)
+        }
+        self.navigationItem.rightBarButtonItems = items
     }
     
     @objc func dismissKeyboard() {
@@ -49,7 +66,7 @@ class WritingViewController: UIViewController, WritingViewProtocol {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.textView.isFirstResponder) {
+        if self.textView.isFirstResponder {
             self.textView.resignFirstResponder()
         }
     }
@@ -75,13 +92,19 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         }
         
         var textList: [Text] = TextService.shared.textList() ?? []
-        textList.append(Text(content: self.textView.text, date: Date()))
+        if self.text != nil {
+            let index = textList.index(of: self.text!) ?? textList.count
+            self.text!.content = self.textView.text
+            self.text!.date = Date()
+            textList[index] = self.text!
+        } else {
+            let text = Text(id: UUID().uuidString, content: self.textView.text, date: Date())
+            textList.append(text)
+        }
+        
         TextService.shared.saveTextList(value: textList)
         
-        let alert = UIAlertController(title: from("Saved"), message: from("SavedMessage"), preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(ok)
-        self.present(alert, animated: true, completion: nil)
+        Loaf("保存しました", state: .success , sender: self).show(Loaf.Duration.short, completionHandler: nil)
     }
     
     @objc private func textListClicked(_ sender: UIButton) {

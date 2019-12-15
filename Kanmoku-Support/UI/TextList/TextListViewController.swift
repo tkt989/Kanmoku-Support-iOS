@@ -32,8 +32,13 @@ class TextListViewController: UIViewController, TextListViewProtocol {
         
         self.orderButton.imageView?.contentMode = .scaleAspectFit
         
+        let add = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(clickAdd(_:)))
         let edit = UIBarButtonItem(title: "編集", style: .plain, target: self, action: #selector(clickEdit(_:)))
-        self.navigationItem.rightBarButtonItem = edit
+        self.navigationItem.rightBarButtonItems = [add, edit]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.presenter.updateTextList()
     }
     
     @IBAction func typeClick(_ sender: Any) {
@@ -42,6 +47,10 @@ class TextListViewController: UIViewController, TextListViewProtocol {
     
     @IBAction func orderClick(_ sender: Any) {
         self.presenter.onOrderClick()
+    }
+    
+    @objc private func clickAdd(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "editText", sender: nil)
     }
     
     @objc private func clickEdit(_ sender: UIBarButtonItem) {
@@ -75,11 +84,14 @@ class TextListViewController: UIViewController, TextListViewProtocol {
         self.tableView.reloadData()
     }
     
-    func back(_ text: String) {
-        if let _listener = self.listener {
-            _listener(text)
-        }
-        self.navigationController?.popViewController(animated: true)
+    func back(_ text: Text) {
+        self.performSegue(withIdentifier: "editText", sender: text)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! WritingViewController
+        vc.text = sender as? Text
+        vc.savable = true
     }
 }
 

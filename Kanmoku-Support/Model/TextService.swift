@@ -12,9 +12,18 @@ import DefaultsKit
 ///
 /// 保存した文字列を表したクラス
 ///
-struct Text: Codable {
+struct Text: Codable, Equatable {
+    public var id: String?
     public var content: String
     public var date: Date
+    
+    public static func ==(lhs: Text, rhs: Text) -> Bool {
+        if lhs.id == nil || rhs.id == nil {
+            return false
+        }
+        
+        return lhs.id == rhs.id
+    }
 }
 
 ///
@@ -43,7 +52,14 @@ class TextService {
     /// 
     func textList() -> [Text]? {
         let key = Key<[Text]>("TEXT_LIST")
-        return Defaults().get(for: key)
+        let textList = Defaults().get(for: key)
+        return textList?.map({ _text in
+            var text = _text
+            if text.id == nil {
+                text.id = UUID().uuidString
+            }
+            return text
+        })
     }
     
     func type() -> Type? {

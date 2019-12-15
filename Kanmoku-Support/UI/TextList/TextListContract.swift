@@ -13,11 +13,12 @@ protocol TextListViewProtocol {
     func updateType(_ type: Type)
     func updateOrder(_ order: Order)
     func refreshTextList()
-    func back(_ text: String)
+    func back(_ text: Text)
 }
 
 protocol TextListPresenterProtocol: UITableViewDataSource {
     func onOrderClick()
     func onTypeClick()
     func onTextClick(_ index: Int)
+    func updateTextList()
 }
