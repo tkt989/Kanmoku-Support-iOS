@@ -10,40 +10,33 @@ import UIKit
 import Loaf
 import FontAwesome_swift
 
-class WritingViewController: UIViewController, WritingViewProtocol {
+class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDelegate {
     @IBOutlet var textView: UITextView!
     @IBOutlet var speechButton: UIButton!
     var text: Text?
     var savable = false
     private var presenter: WritingPresenter!
+    private var frameSize: CGSize?
+    private var done: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.presenter = WritingPresenter(self)
         
-        // キーボードに完了ボタンを表示する
-        let keyboardToolbar = UIToolbar()
-        keyboardToolbar.sizeToFit()
-        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(WritingViewController.dismissKeyboard))
-        keyboardToolbar.items = [flexBarButton, doneBarButton]
-        self.textView.inputAccessoryView = keyboardToolbar
-        
-        self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        self.textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
-        
-        if self.text != nil {
-            self.textView.text = self.text?.content
-        } else {
-            self.textView.becomeFirstResponder()
-        }
-        
-        self.setupNavigationItems()
-        
         let notification = NotificationCenter.default
         notification.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        self.textView.layer.borderColor = UIColor(hex: "EEEEEE").cgColor
+        self.textView.delegate = self
+        
+        if self.text != nil {
+            self.textView.text = self.text?.content
+        }
+        
+        self.setupNavigationItems()
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,6 +46,8 @@ class WritingViewController: UIViewController, WritingViewProtocol {
     
     private func setupNavigationItems() {
         var items: [UIBarButtonItem] = []
+        
+        self.done = UIBarButtonItem(title: "完了", style: .plain, target: nil, action: #selector(self.textDone(_:)))
         
         if self.savable {
             let icon = UIImage.fontAwesomeIcon(name: .save, style: .solid, textColor: .black, size: CGSize(width: 28, height: 28))
@@ -117,6 +112,13 @@ class WritingViewController: UIViewController, WritingViewProtocol {
         self.performSegue(withIdentifier: "textList", sender: nil)
     }
     
+    @objc private func textDone(_ sender: UIButton?) {
+        self.textView.resignFirstResponder()
+        self.navigationItem.rightBarButtonItems?.removeAll(where: { button in
+            return self.done == button
+        })
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! TextListViewController
         vc.listener = { text in
@@ -125,19 +127,20 @@ class WritingViewController: UIViewController, WritingViewProtocol {
     }
     
     @objc private func keyboardWillShow(notification: Notification?) {
-        let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        let rect = (notification?.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         let duration: TimeInterval? = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
         UIView.animate(withDuration: duration!, animations: { () in
-            let transform = CGAffineTransform(translationX: 0, y: -(rect?.size.height)!)
-            self.view.transform = transform
+            var size = self.view.frame.size
+            self.frameSize = size
+            size.height = size.height - rect!.size.height
+            self.view.frame.size = size
         })
     }
     
     @objc private func keyboardWillHide(notification: Notification?) {
         let duration: TimeInterval? = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double
         UIView.animate(withDuration: duration!, animations: { () in
-
-            self.view.transform = CGAffineTransform.identity
+            self.view.frame.size = self.frameSize!
         })
     }
     
@@ -147,6 +150,14 @@ class WritingViewController: UIViewController, WritingViewProtocol {
     
     func stopSpeech() {
         self.speechButton.isEnabled = true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        self.navigationItem.rightBarButtonItems?.insert(self.done, at: 0)
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.textDone(nil)
     }
 }
 
