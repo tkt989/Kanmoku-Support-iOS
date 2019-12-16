@@ -24,6 +24,8 @@ class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDe
         
         self.presenter = WritingPresenter(self)
         
+        self.frameSize = self.view.frame.size
+        
         let notification = NotificationCenter.default
         notification.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -130,8 +132,7 @@ class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDe
         let rect = (notification?.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         let duration: TimeInterval? = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
         UIView.animate(withDuration: duration!, animations: { () in
-            var size = self.view.frame.size
-            self.frameSize = size
+            var size = self.frameSize!
             size.height = size.height - rect!.size.height
             self.view.frame.size = size
         })
