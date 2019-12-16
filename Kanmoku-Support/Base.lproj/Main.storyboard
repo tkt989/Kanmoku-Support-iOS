@@ -332,7 +332,7 @@
                                 <rect key="frame" x="0.0" y="88.5" width="320" height="479.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsx-PS-hqh">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="488"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-hh-jPP">
                                                 <rect key="frame" x="8" y="16" width="144" height="144"/>
@@ -585,15 +585,14 @@
                                             <constraint firstItem="8nr-hh-jPP" firstAttribute="width" secondItem="Wsx-PS-hqh" secondAttribute="width" multiplier="0.45" id="HQv-uO-yiB"/>
                                             <constraint firstItem="8nr-hh-jPP" firstAttribute="top" secondItem="Wsx-PS-hqh" secondAttribute="top" constant="16" id="Pmn-hs-59t"/>
                                             <constraint firstAttribute="trailing" secondItem="a6b-2c-wWq" secondAttribute="trailing" constant="8" id="SsL-Du-jnF"/>
-                                            <constraint firstAttribute="height" priority="750" constant="500" id="Vkv-NQ-sz1"/>
                                             <constraint firstItem="SyW-Xf-9fu" firstAttribute="top" secondItem="8nr-hh-jPP" secondAttribute="bottom" constant="16" id="ZR5-8e-Sag"/>
+                                            <constraint firstAttribute="bottom" secondItem="QlF-Ix-PUG" secondAttribute="bottom" constant="8" id="bWy-Lq-bau"/>
                                             <constraint firstItem="a6b-2c-wWq" firstAttribute="width" secondItem="Wsx-PS-hqh" secondAttribute="width" multiplier="0.45" id="dVB-36-WpG"/>
                                             <constraint firstItem="QlF-Ix-PUG" firstAttribute="width" secondItem="Wsx-PS-hqh" secondAttribute="width" multiplier="0.45" id="eOZ-2N-oTB"/>
                                             <constraint firstAttribute="trailing" secondItem="PB8-wA-KCe" secondAttribute="trailing" constant="8" id="iWZ-ha-ZHP"/>
                                             <constraint firstItem="PB8-wA-KCe" firstAttribute="width" secondItem="Wsx-PS-hqh" secondAttribute="width" multiplier="0.45" id="k9S-Ix-WAX"/>
                                             <constraint firstItem="SyW-Xf-9fu" firstAttribute="leading" secondItem="Wsx-PS-hqh" secondAttribute="leading" constant="8" id="nJY-Ns-dyV"/>
                                             <constraint firstItem="8nr-hh-jPP" firstAttribute="leading" secondItem="Wsx-PS-hqh" secondAttribute="leading" constant="8" id="ocG-Oa-MfZ"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="qXP-J0-us2"/>
                                             <constraint firstItem="a6b-2c-wWq" firstAttribute="top" secondItem="8nr-hh-jPP" secondAttribute="bottom" constant="16" id="tFo-Gd-Fcx"/>
                                         </constraints>
                                     </view>
@@ -775,6 +774,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="svj-tT-59X"/>
-        <segue reference="vUN-0I-wTk"/>
+        <segue reference="Jfc-6K-ZaG"/>
     </inferredMetricsTieBreakers>
 </document>
