@@ -7,20 +7,31 @@
 //
 
 import Foundation
+import DefaultsKit
 
 class Settings {
     private static let userDefaults = UserDefaults.standard
-    static let sharedInstance = Settings()
+    static let shared = Settings()
     private init() {
         Settings.userDefaults.register(defaults:
         [
-            "reverse_show": true
+            "reverse_show": true,
+            "text_show_size": 24.0
         ])
     }
     
     var isReverseShow: Bool {
         get {
             return Settings.userDefaults.bool(forKey: "reverse_show")
+        }
+    }
+    
+    var textShowSize: CGFloat {
+        get {
+            return Defaults().get(for: Key<CGFloat>("text_show_size")) ?? 24.0
+        }
+        set {
+            Defaults().set(newValue, for: Key<CGFloat>("text_show_size"))
         }
     }
 }

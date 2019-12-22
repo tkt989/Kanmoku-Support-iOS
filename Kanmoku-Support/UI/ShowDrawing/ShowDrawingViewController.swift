@@ -18,7 +18,7 @@ class ShowDrawingViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.imageView.image = image
         
-        if (Settings.sharedInstance.isReverseShow) {
+        if (Settings.shared.isReverseShow) {
             self.imageView.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
         }
     }

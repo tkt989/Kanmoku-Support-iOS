@@ -19,7 +19,7 @@ class IllustShowViewController: UIViewController {
         // Do any additional setup after loading the view.
         imageView.image = illust
         
-        if (Settings.sharedInstance.isReverseShow) {
+        if (Settings.shared.isReverseShow) {
             self.imageView.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi))
         }
     }
