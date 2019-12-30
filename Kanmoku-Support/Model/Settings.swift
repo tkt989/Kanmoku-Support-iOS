@@ -28,10 +28,10 @@ class Settings {
     
     var textShowSize: CGFloat {
         get {
-            return Defaults().get(for: Key<CGFloat>("text_show_size")) ?? 24.0
+            return CGFloat(Defaults().get(for: Key<Double>("text_show_size")) ?? 24.0)
         }
         set {
-            Defaults().set(newValue, for: Key<CGFloat>("text_show_size"))
+            Defaults().set(Double(newValue), for: Key<Double>("text_show_size"))
         }
     }
 }

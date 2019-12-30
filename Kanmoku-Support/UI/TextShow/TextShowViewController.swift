@@ -12,13 +12,10 @@ import DefaultsKit
 class TextShowViewController: UIViewController, UITextViewDelegate {
     public var text: String!
     @IBOutlet var textView: UITextView!
-    private var pinchGesture: UIPinchGestureRecognizer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(zoom(sender:)))
-
         // Do any additional setup after loading the view.
         textView.text = text
         textView.font = UIFont(name: "arial", size: Settings.shared.textShowSize)
@@ -27,8 +24,7 @@ class TextShowViewController: UIViewController, UITextViewDelegate {
             textView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         }
         textView.delegate = self
-        textView.addGestureRecognizer(self.pinchGesture)
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.textView.centerVertically()
         }
@@ -47,14 +43,33 @@ class TextShowViewController: UIViewController, UITextViewDelegate {
         self.textView.centerVertically()
     }
     
-    @objc func zoom(sender: UIPinchGestureRecognizer) {
+    @IBAction func zoomIn(_ sender: UIButton) {
         var pointSize = self.textView.font?.pointSize
-        pointSize = max(sender.velocity * 1 + pointSize!, 10);
-        self.textView.font = UIFont( name: "arial", size: (pointSize)!)
-        self.textView.layoutIfNeeded()
-        self.textView.centerVertically()
+        pointSize! *= 1.2
+        let text = self.textView.text
+        self.textView.text = ""
         
-        if sender.state == .ended {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.textView.font = UIFont(name: "arial", size: pointSize!)
+            self.textView.text = text
+            self.textView.centerVertically()
+            Settings.shared.textShowSize = pointSize!
+        }
+    }
+    
+    @IBAction func zoomOut(_ sender: UIButton) {
+        var pointSize = self.textView.font?.pointSize
+        pointSize! /= 1.2
+        if pointSize! < 10.0 {
+            pointSize = 10.0
+        }
+        let text = self.textView.text
+        self.textView.text = ""
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.textView.font = UIFont(name: "arial", size: pointSize!)
+            self.textView.text = text
+            self.textView.centerVertically()
             Settings.shared.textShowSize = pointSize!
         }
     }

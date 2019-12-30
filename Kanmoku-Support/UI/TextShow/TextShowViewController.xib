@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,13 +40,37 @@
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEB-nu-dT4">
+                    <rect key="frame" x="916" y="1311" width="91" height="48"/>
+                    <state key="normal" title="大きく"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="zoomIn:" destination="-1" eventType="touchUpInside" id="N2b-sg-PTZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQJ-nh-Dtz">
+                    <rect key="frame" x="16" y="1311" width="91" height="48"/>
+                    <state key="normal" title="小さく"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="zoomOut:" destination="-1" eventType="touchUpInside" id="gVU-Ho-TbM"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hj0-d8-EtJ" secondAttribute="trailing" constant="16" id="51d-3D-oCR"/>
+                <constraint firstItem="XEB-nu-dT4" firstAttribute="centerY" secondItem="OpI-vL-FGO" secondAttribute="centerY" id="BuG-5q-6IF"/>
                 <constraint firstItem="Hj0-d8-EtJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Eeu-71-xt0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XEB-nu-dT4" secondAttribute="trailing" constant="16" id="Kcz-UM-qN5"/>
                 <constraint firstItem="Hj0-d8-EtJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LIs-kS-fXR"/>
                 <constraint firstItem="OpI-vL-FGO" firstAttribute="top" secondItem="Hj0-d8-EtJ" secondAttribute="bottom" constant="8" id="MdM-KD-bgN"/>
+                <constraint firstItem="EQJ-nh-Dtz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="czk-0O-ezb"/>
+                <constraint firstItem="EQJ-nh-Dtz" firstAttribute="centerY" secondItem="OpI-vL-FGO" secondAttribute="centerY" id="fAS-sp-n5u"/>
                 <constraint firstItem="OpI-vL-FGO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hNa-gu-CMm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OpI-vL-FGO" secondAttribute="bottom" constant="16" id="hxi-al-mBq"/>
             </constraints>
