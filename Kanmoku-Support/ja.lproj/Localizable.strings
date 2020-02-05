@@ -17,3 +17,6 @@
 "SavedMessage" = "「一覧」から保存した文章を読み出すことができます";
 "CanNotSave" = "保存できません";
 "CanNotSaveEmpty" = "空の文章は保存できません";
+
+"CoachMarkShowButton" = "このボタンを押すと文章を相手に見せることができます";
+"CoachMarkSpeechButton" = "押すと文章が読み上げられます";

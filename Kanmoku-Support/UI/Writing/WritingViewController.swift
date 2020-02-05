@@ -9,21 +9,34 @@
 import UIKit
 import Loaf
 import FontAwesome_swift
+import Instructions
 
 class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDelegate {
-    @IBOutlet var textView: UITextView!
-    @IBOutlet var speechButton: UIButton!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var showButton: UIButton!
+    @IBOutlet weak var speechButton: UIButton!
     var text: Text?
     var savable = false
     private var presenter: WritingPresenter!
     private var frameSize: CGSize?
     private var done: UIBarButtonItem!
     
+    var coachMarkController: CoachMarkController?
+    var coachController = CoachMarksController()
+    var marks: [Mark] {
+        get {
+            return [
+                Mark(message: NSLocalizedString("CoachMarkShowButton", comment: ""), view: self.showButton),
+                Mark(message: NSLocalizedString("CoachMarkSpeechButton", comment: ""), view: self.speechButton)
+            ]
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.presenter = WritingPresenter(self)
-        
+        self.coachMarkController = CoachMarkController(marks: self.marks, key: "WritingViewController")
         self.frameSize = self.view.frame.size
         
         let notification = NotificationCenter.default
@@ -39,6 +52,9 @@ class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDe
         }
         
         self.setupNavigationItems()
+        
+        self.coachController.overlay.color = UIColor.init(hex: "000000", alpha: 0.3)
+        self.coachMarkController?.start(vc: self)
     }
     
     override func didReceiveMemoryWarning() {

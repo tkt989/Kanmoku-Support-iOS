@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -92,6 +92,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ouv-iO-Ld4"/>
                     <connections>
+                        <outlet property="showButton" destination="HHk-Jm-cnm" id="bVg-YA-WOe"/>
                         <outlet property="speechButton" destination="ujo-pT-MFc" id="ogK-eo-3xz"/>
                         <outlet property="textView" destination="AXM-N3-26P" id="CZf-0I-Wq1"/>
                         <segue destination="X93-nV-dMU" kind="show" identifier="textList" id="EDn-KY-d6n"/>
@@ -773,7 +774,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="svj-tT-59X"/>
+        <segue reference="EDn-KY-d6n"/>
         <segue reference="Jfc-6K-ZaG"/>
     </inferredMetricsTieBreakers>
 </document>

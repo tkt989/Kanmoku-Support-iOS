@@ -9,6 +9,7 @@ target 'Kanmoku-Support' do
   pod 'DefaultsKit'
   pod 'Loaf'
   pod 'FontAwesome.swift'
+  pod 'Instructions'
 
   # Pods for Kanmoku-Support
 

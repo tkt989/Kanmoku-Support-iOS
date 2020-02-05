@@ -60,6 +60,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.3.1):
     - GoogleUtilities/Logger
+  - Instructions (1.4.0)
   - Loaf (0.5.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -72,6 +73,7 @@ DEPENDENCIES:
   - DefaultsKit
   - Firebase/Analytics
   - FontAwesome.swift
+  - Instructions
   - Loaf
   - NXDrawKit
 
@@ -91,6 +93,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - Instructions
     - Loaf
     - nanopb
 
@@ -107,10 +110,11 @@ SPEC CHECKSUMS:
   GoogleDataTransport: c8617c00e4f3eb9418e42ac0e8ac5241a9d555dd
   GoogleDataTransportCCTSupport: 9f352523e8785a71f6754f51eeff09f49ec19268
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
+  Instructions: 8986424854e99640665a82cfe56852c52a0c5bdf
   Loaf: 0800b444431366bc395d54267975d4ad4ad5c99c
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NXDrawKit: a287045ea335673d6e1e693d80d44073d8726514
 
-PODFILE CHECKSUM: 7dcd6e92f0d68aea4f431fcc6473981f5de81d1b
+PODFILE CHECKSUM: 0692d32ba90673e3776bd45c00db6ac3c0c1a7a6
 
 COCOAPODS: 1.8.4

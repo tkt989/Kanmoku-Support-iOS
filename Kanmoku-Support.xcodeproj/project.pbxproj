@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00C448A44B21BD6598B1A329 /* Pods_Kanmoku_SupportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */; };
+		160B2C5D23EAC0BE002CD2BB /* CoachMarkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B2C5C23EAC0BE002CD2BB /* CoachMarkController.swift */; };
 		163BDE8C216B135A007C7E07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BDE8B216B135A007C7E07 /* Settings.swift */; };
 		163F5FB52174D0A9000D2839 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 163F5FB42174D0A9000D2839 /* assets */; };
 		163F5FB72174D8EF000D2839 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F5FB62174D8EF000D2839 /* Templates.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		160B2C5C23EAC0BE002CD2BB /* CoachMarkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkController.swift; sourceTree = "<group>"; };
 		163BDE8B216B135A007C7E07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		163F5FB42174D0A9000D2839 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = "Kanmoku-Support/assets"; sourceTree = "<group>"; };
 		163F5FB62174D8EF000D2839 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160B2C5B23EABEF1002CD2BB /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				160B2C5C23EAC0BE002CD2BB /* CoachMarkController.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		1655B4362349D46F00BBA8D4 /* TextShow */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +294,7 @@
 		16DA4F7E2167C9CB00C86180 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				160B2C5B23EABEF1002CD2BB /* Widget */,
 				1655B4392349D7E200BBA8D4 /* ShowDrawing */,
 				1655B4382349D7D600BBA8D4 /* Drawing */,
 				1655B4372349D7C500BBA8D4 /* IllustSelect */,
@@ -581,6 +592,7 @@
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
 				1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */,
 				167872BA2184A49700BD2902 /* TemplatesViewController.swift in Sources */,
+				160B2C5D23EAC0BE002CD2BB /* CoachMarkController.swift in Sources */,
 				16BE8C2C2081F7490041602C /* TTS.swift in Sources */,
 				16498DA020849D0900332403 /* DrawingViewController.swift in Sources */,
 				16BE8C2E20823E070041602C /* IllustSelectViewController.swift in Sources */,
