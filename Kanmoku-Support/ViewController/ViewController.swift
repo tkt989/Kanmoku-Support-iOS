@@ -30,4 +30,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     }
+    
+    @IBAction func openSetting(_ sender: UIBarButtonItem) {
+        let url = URL(string: "app-settings:root=General&path=\(Bundle.main.bundleIdentifier!)")!
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }

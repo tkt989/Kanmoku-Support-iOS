@@ -634,6 +634,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="bXx-Tf-ozO">
                         <barButtonItem key="backBarButtonItem" title=" 戻る" id="zjA-KW-Hxn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="aj8-pF-SgK">
+                            <connections>
+                                <action selector="openSetting:" destination="BYZ-38-t0r" id="dmB-DP-kIO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="Wsx-PS-hqh" id="zb4-BD-YC9"/>
@@ -780,6 +785,7 @@
         <image name="buttonText" width="512" height="512"/>
         <image name="buttonTextList" width="512" height="512"/>
         <image name="face2" width="110" height="108"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <namedColor name="MenuTextColor">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -788,7 +794,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EDn-KY-d6n"/>
+        <segue reference="svj-tT-59X"/>
         <segue reference="Jfc-6K-ZaG"/>
     </inferredMetricsTieBreakers>
 </document>
