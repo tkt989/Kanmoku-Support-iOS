@@ -12,19 +12,37 @@ import NXDrawKit
 class DrawingViewController: UIViewController {
     var canvasView: Canvas!
     var image = UIImage()
+
+    @IBOutlet weak var coachMarkView: UIView!
     @IBOutlet weak var showButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    var coachMarkController: CoachMarkController?
+    var marks: [Mark] {
+        get {
+            return [
+                Mark(message: NSLocalizedString("CoachMarkCanvas", comment: ""), view: self.coachMarkView),
+                Mark(message: NSLocalizedString("CoachMarkShowDrawingButton", comment: ""), view: self.showButton),
+                Mark(message: NSLocalizedString("CoachMarkDeleteDrawingButton", comment: ""), view: self.deleteButton)
+            ]
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         let canvasView = Canvas()
         canvasView.frame = self.view.frame
         canvasView.delegate = self
         self.canvasView = canvasView
-        
+
         self.view.addSubview(self.canvasView)
         self.view.sendSubviewToBack(self.canvasView)
+        
+        self.coachMarkController = CoachMarkController(marks: self.marks, key: "DrawingViewController")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.coachMarkController?.start(vc: self)
     }
 
     override func didReceiveMemoryWarning() {

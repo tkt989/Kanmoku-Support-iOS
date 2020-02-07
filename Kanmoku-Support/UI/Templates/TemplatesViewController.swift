@@ -9,17 +9,29 @@
 import UIKit
 
 class TemplatesViewController: UIViewController, TemplatesViewProtocol {
+    @IBOutlet weak var showButton: UIButton!
     @IBOutlet weak var speechButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textView: UITextView!
     
     var presenter: TemplatesPresenterProtocol!
     var situations: [Situation] = []
+    var coachMarkController: CoachMarkController?
+    var marks: [Mark] {
+        get {
+            return [
+                Mark(message: NSLocalizedString("CoachMarkTemplateList", comment: ""), view: self.tableView),
+                Mark(message: NSLocalizedString("CoachMarkShowButton", comment: ""), view: self.showButton),
+                Mark(message: NSLocalizedString("CoachMarkSpeechButton", comment: ""), view: self.speechButton)
+            ]
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.presenter = TemplatesPresenter(self)
+        self.coachMarkController = CoachMarkController(marks: self.marks, key: "TemplateViewController")
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -37,6 +49,10 @@ class TemplatesViewController: UIViewController, TemplatesViewProtocol {
                     print(error.localizedDescription)
             }
         }   
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.coachMarkController?.start(vc: self)
     }
     
     @IBAction func tapShowText(_ sender: UIButton) {

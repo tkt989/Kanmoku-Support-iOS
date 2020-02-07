@@ -18,5 +18,9 @@
 "CanNotSave" = "保存できません";
 "CanNotSaveEmpty" = "空の文章は保存できません";
 
-"CoachMarkShowButton" = "このボタンを押すと文章を相手に見せることができます";
+"CoachMarkShowButton" = "このボタンを押すと文章を相手に見せられます";
 "CoachMarkSpeechButton" = "押すと文章が読み上げられます";
+"CoachMarkTemplateList" = "タップするとリストから伝えたい文を選べます";
+"CoachMarkCanvas" = "ここでなぞると描くことができます";
+"CoachMarkShowDrawingButton" = "このボタンを押すと描いたものを相手に見せられます";
+"CoachMarkDeleteDrawingButton" = "描いたものを消せます";

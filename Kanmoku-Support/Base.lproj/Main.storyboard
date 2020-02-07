@@ -193,6 +193,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPY-kB-5ac" userLabel="CoachMarkView">
+                                <rect key="frame" x="16" y="60" width="288" height="446"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-1r-WgM">
                                 <rect key="frame" x="258" y="522" width="46" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,20 +248,29 @@
                             <constraint firstItem="P6o-1r-WgM" firstAttribute="height" secondItem="dgb-UB-i2f" secondAttribute="height" id="2IJ-qE-xdj"/>
                             <constraint firstItem="P6o-1r-WgM" firstAttribute="width" secondItem="dgb-UB-i2f" secondAttribute="width" id="2Zp-yF-3xH"/>
                             <constraint firstItem="1Z3-MT-2k2" firstAttribute="leading" secondItem="yhW-Hc-BU6" secondAttribute="leading" id="7IF-2e-jbl"/>
+                            <constraint firstItem="wPY-kB-5ac" firstAttribute="leading" secondItem="92f-Pp-ldL" secondAttribute="leading" constant="16" id="G2P-b1-Ba5"/>
                             <constraint firstItem="92f-Pp-ldL" firstAttribute="bottom" secondItem="dgb-UB-i2f" secondAttribute="bottom" constant="16" id="HSv-X1-AKm"/>
                             <constraint firstItem="1Z3-MT-2k2" firstAttribute="height" secondItem="yhW-Hc-BU6" secondAttribute="height" id="JC9-tI-MCv"/>
                             <constraint firstItem="1Z3-MT-2k2" firstAttribute="trailing" secondItem="yhW-Hc-BU6" secondAttribute="trailing" id="KOD-Wh-mHD"/>
+                            <constraint firstItem="wPY-kB-5ac" firstAttribute="top" secondItem="92f-Pp-ldL" secondAttribute="top" constant="16" id="UAk-IM-M0o"/>
                             <constraint firstItem="1Z3-MT-2k2" firstAttribute="bottom" secondItem="yhW-Hc-BU6" secondAttribute="bottom" id="cH1-UJ-fyt"/>
                             <constraint firstItem="1Z3-MT-2k2" firstAttribute="top" secondItem="yhW-Hc-BU6" secondAttribute="top" id="dNu-Gk-gWa"/>
+                            <constraint firstItem="92f-Pp-ldL" firstAttribute="trailing" secondItem="wPY-kB-5ac" secondAttribute="trailing" constant="16" id="fk8-VV-xag"/>
                             <constraint firstItem="92f-Pp-ldL" firstAttribute="trailing" secondItem="dgb-UB-i2f" secondAttribute="trailing" constant="16" id="h1C-hs-Ix8"/>
                             <constraint firstItem="1Z3-MT-2k2" firstAttribute="leading" secondItem="92f-Pp-ldL" secondAttribute="leading" constant="16" id="iUM-qq-jz5"/>
                             <constraint firstItem="92f-Pp-ldL" firstAttribute="bottom" secondItem="1Z3-MT-2k2" secondAttribute="bottom" constant="16" id="qPU-xp-tRD"/>
+                            <constraint firstItem="1Z3-MT-2k2" firstAttribute="top" secondItem="wPY-kB-5ac" secondAttribute="bottom" constant="16" id="si7-14-JbY"/>
                             <constraint firstItem="dgb-UB-i2f" firstAttribute="top" secondItem="P6o-1r-WgM" secondAttribute="top" id="siw-pv-gaS"/>
                             <constraint firstItem="dgb-UB-i2f" firstAttribute="leading" secondItem="P6o-1r-WgM" secondAttribute="leading" id="vhJ-om-gvz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="92f-Pp-ldL"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vea-dQ-MUw"/>
+                    <connections>
+                        <outlet property="coachMarkView" destination="wPY-kB-5ac" id="B6h-9j-P64"/>
+                        <outlet property="deleteButton" destination="1Z3-MT-2k2" id="FID-Bl-VZe"/>
+                        <outlet property="showButton" destination="dgb-UB-i2f" id="YWZ-vn-SFd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGo-5m-l0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -732,6 +745,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RcE-zy-yJL"/>
                     <connections>
+                        <outlet property="showButton" destination="du7-G3-yI4" id="q5T-H2-kP8"/>
                         <outlet property="speechButton" destination="2EX-Ph-HSr" id="wAC-NS-gxQ"/>
                         <outlet property="tableView" destination="fG5-nx-VKj" id="VrQ-b6-uj3"/>
                         <outlet property="textView" destination="nmY-0z-HKo" id="4cP-a1-jYc"/>
