@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqX-Hp-Pp8">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -778,6 +778,10 @@
             <point key="canvasLocation" x="-516" y="-431"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="svj-tT-59X"/>
+        <segue reference="Jfc-6K-ZaG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="buttonDrawing" width="512" height="512"/>
         <image name="buttonIllust" width="512" height="512"/>
@@ -785,7 +789,7 @@
         <image name="buttonText" width="512" height="512"/>
         <image name="buttonTextList" width="512" height="512"/>
         <image name="face2" width="110" height="108"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <namedColor name="MenuTextColor">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -793,8 +797,4 @@
             <color red="1" green="0.80000001192092896" blue="0.7369999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="svj-tT-59X"/>
-        <segue reference="Jfc-6K-ZaG"/>
-    </inferredMetricsTieBreakers>
 </document>

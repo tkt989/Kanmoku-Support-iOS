@@ -20,7 +20,9 @@ class IllustSelectViewController: UICollectionViewController {
         "face6",
         "face7",
         "face8",
-        "face9"
+        "face9",
+        "illust10",
+        "illust11"
     ]
     
     override func viewDidLoad() {
