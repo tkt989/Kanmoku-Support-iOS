@@ -37,6 +37,7 @@ class DrawingViewController: UIViewController {
 
         self.view.addSubview(self.canvasView)
         self.view.sendSubviewToBack(self.canvasView)
+        self.view.sendSubviewToBack(self.coachMarkView)
         
         self.coachMarkController = CoachMarkController(marks: self.marks, key: "DrawingViewController")
     }
