@@ -27,6 +27,13 @@ struct ShowDrawingView: View {
                 .padding()
         }
     }
+    
+    static func uiHostingController(image: UIImage?) -> UIHostingController<ShowDrawingView> {
+        let view = ShowDrawingView(image: .constant(image))
+        let vc = UIHostingController(rootView: view)
+        vc.rootView.dismiss = { vc.dismiss(animated: true, completion: nil) }
+        return vc
+    }
 }
 
 struct ShowDrawingView_Previews: PreviewProvider {

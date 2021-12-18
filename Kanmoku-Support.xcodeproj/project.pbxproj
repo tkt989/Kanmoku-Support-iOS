@@ -15,8 +15,6 @@
 		163F5FB72174D8EF000D2839 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F5FB62174D8EF000D2839 /* Templates.swift */; };
 		1646A9B8218DF8A000A2E301 /* TemplatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646A9B7218DF8A000A2E301 /* TemplatesPresenter.swift */; };
 		16498DA020849D0900332403 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498D9F20849D0900332403 /* DrawingViewController.swift */; };
-		16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16498DA12084A34500332403 /* ShowDrawingViewController.swift */; };
-		16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16498DA22084A34500332403 /* ShowDrawingViewController.xib */; };
 		1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655B44A234A097A00BBA8D4 /* Extension.swift */; };
 		1655B450234A0A7D00BBA8D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1655B452234A0A7D00BBA8D4 /* Localizable.strings */; };
 		165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165B3DCF2340F3F7005D8672 /* TextListContract.swift */; };
@@ -79,8 +77,6 @@
 		163F5FB62174D8EF000D2839 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
 		1646A9B7218DF8A000A2E301 /* TemplatesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPresenter.swift; sourceTree = "<group>"; };
 		16498D9F20849D0900332403 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
-		16498DA12084A34500332403 /* ShowDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingViewController.swift; sourceTree = "<group>"; };
-		16498DA22084A34500332403 /* ShowDrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDrawingViewController.xib; sourceTree = "<group>"; };
 		1655B44A234A097A00BBA8D4 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1655B453234A0AAE00BBA8D4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		165B3DCF2340F3F7005D8672 /* TextListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListContract.swift; sourceTree = "<group>"; };
@@ -195,8 +191,6 @@
 		1655B4392349D7E200BBA8D4 /* ShowDrawing */ = {
 			isa = PBXGroup;
 			children = (
-				16498DA12084A34500332403 /* ShowDrawingViewController.swift */,
-				16498DA22084A34500332403 /* ShowDrawingViewController.xib */,
 				1607B759276CB34B00E1BDB1 /* ShowDrawingView.swift */,
 			);
 			path = ShowDrawing;
@@ -480,7 +474,6 @@
 				1655B450234A0A7D00BBA8D4 /* Localizable.strings in Resources */,
 				1690DA02207F92A90096B23C /* Assets.xcassets in Resources */,
 				16BE8C36208264B40041602C /* Settings.bundle in Resources */,
-				16498DA42084A34500332403 /* ShowDrawingViewController.xib in Resources */,
 				16E073BC2371BBE100B7EF89 /* GoogleService-Info.plist in Resources */,
 				1690DA00207F92A80096B23C /* Main.storyboard in Resources */,
 			);
@@ -591,7 +584,6 @@
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
 				165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */,
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
-				16498DA32084A34500332403 /* ShowDrawingViewController.swift in Sources */,
 				16F71D9C23A546EA00A6A039 /* String+extension.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
 				1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */,

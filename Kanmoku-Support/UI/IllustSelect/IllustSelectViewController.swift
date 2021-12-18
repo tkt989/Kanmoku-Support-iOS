@@ -53,12 +53,9 @@ class IllustSelectViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let cell = collectionView.cellForItem(at: indexPath) as! IllustCell
-        let vc = UIHostingController(rootView: ShowDrawingView(image: .constant(cell.illustView.image)))
-        //vc.illust = cell.illustView.image
+        
+        let vc = ShowDrawingView.uiHostingController(image: cell.illustView.image)
         vc.modalPresentationStyle = .fullScreen
-        vc.rootView.dismiss = {
-            vc.dismiss(animated: true, completion: nil)
-        }
         present(vc, animated: true, completion: nil)
         return true
     }
