@@ -15,7 +15,7 @@ class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDe
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var showButton: UIButton!
     @IBOutlet weak var speechButton: UIButton!
-    var text: Text?
+    var text: KSText?
     var savable = false
     private var presenter: WritingPresenter!
     private var frameSize: CGSize?
@@ -90,8 +90,7 @@ class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDe
     }
     
     @IBAction func tapShowText(_ sender: UIButton) {
-        let vc = TextShowViewController()
-        vc.text = self.textView.text
+        let vc = TextShowView.uiHostingController(text: self.textView.text)
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
@@ -109,14 +108,14 @@ class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDe
             return
         }
         
-        var textList: [Text] = TextService.shared.textList() ?? []
+        var textList: [KSText] = TextService.shared.textList() ?? []
         if self.text != nil {
             let index = textList.index(of: self.text!) ?? textList.count
             self.text!.content = self.textView.text
             self.text!.date = Date()
             textList[index] = self.text!
         } else {
-            let text = Text(id: UUID().uuidString, content: self.textView.text, date: Date())
+            let text = KSText(id: UUID().uuidString, content: self.textView.text, date: Date())
             self.text = text
             textList.append(text)
         }

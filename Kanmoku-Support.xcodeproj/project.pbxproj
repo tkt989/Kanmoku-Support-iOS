@@ -10,6 +10,7 @@
 		00C448A44B21BD6598B1A329 /* Pods_Kanmoku_SupportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */; };
 		1607B75A276CB34B00E1BDB1 /* ShowDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607B759276CB34B00E1BDB1 /* ShowDrawingView.swift */; };
 		160B2C5D23EAC0BE002CD2BB /* CoachMarkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B2C5C23EAC0BE002CD2BB /* CoachMarkController.swift */; };
+		1624789F276F735300DD9E29 /* TemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1624789E276F735300DD9E29 /* TemplatesView.swift */; };
 		163BDE8C216B135A007C7E07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BDE8B216B135A007C7E07 /* Settings.swift */; };
 		163F5FB52174D0A9000D2839 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 163F5FB42174D0A9000D2839 /* assets */; };
 		163F5FB72174D8EF000D2839 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F5FB62174D8EF000D2839 /* Templates.swift */; };
@@ -28,14 +29,10 @@
 		1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1690DA03207F92A90096B23C /* LaunchScreen.storyboard */; };
 		1690DA10207F92AA0096B23C /* Kanmoku_SupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690DA0F207F92AA0096B23C /* Kanmoku_SupportTests.swift */; };
 		1690DA1B207F92AA0096B23C /* Kanmoku_SupportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690DA1A207F92AA0096B23C /* Kanmoku_SupportUITests.swift */; };
+		16AC0926276D92B30008C26E /* TextShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC0925276D92B30008C26E /* TextShowView.swift */; };
+		16AC0928276DAA210008C26E /* IllustSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC0927276DAA210008C26E /* IllustSelectView.swift */; };
 		16BE8C252081E7120041602C /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C242081E7120041602C /* WritingViewController.swift */; };
-		16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C262081E9C70041602C /* TextShowViewController.swift */; };
-		16BE8C292081E9C70041602C /* TextShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BE8C272081E9C70041602C /* TextShowViewController.xib */; };
 		16BE8C2C2081F7490041602C /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C2B2081F7490041602C /* TTS.swift */; };
-		16BE8C2E20823E070041602C /* IllustSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C2D20823E070041602C /* IllustSelectViewController.swift */; };
-		16BE8C3020823F470041602C /* IllustCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C2F20823F470041602C /* IllustCell.swift */; };
-		16BE8C3320825C380041602C /* IllustShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE8C3120825C380041602C /* IllustShowViewController.swift */; };
-		16BE8C3420825C380041602C /* IllustShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BE8C3220825C380041602C /* IllustShowViewController.xib */; };
 		16BE8C36208264B40041602C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16BE8C35208264B40041602C /* Settings.bundle */; };
 		16DA4F812167CAD100C86180 /* WritingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA4F802167CAD000C86180 /* WritingPresenter.swift */; };
 		16DA4F832167CB3C00C86180 /* WritingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA4F822167CB3C00C86180 /* WritingContract.swift */; };
@@ -72,6 +69,7 @@
 		0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1607B759276CB34B00E1BDB1 /* ShowDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingView.swift; sourceTree = "<group>"; };
 		160B2C5C23EAC0BE002CD2BB /* CoachMarkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkController.swift; sourceTree = "<group>"; };
+		1624789E276F735300DD9E29 /* TemplatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesView.swift; sourceTree = "<group>"; };
 		163BDE8B216B135A007C7E07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		163F5FB42174D0A9000D2839 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = "Kanmoku-Support/assets"; sourceTree = "<group>"; };
 		163F5FB62174D8EF000D2839 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
@@ -96,14 +94,10 @@
 		1690DA16207F92AA0096B23C /* Kanmoku-SupportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanmoku-SupportUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1690DA1A207F92AA0096B23C /* Kanmoku_SupportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanmoku_SupportUITests.swift; sourceTree = "<group>"; };
 		1690DA1C207F92AA0096B23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16AC0925276D92B30008C26E /* TextShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShowView.swift; sourceTree = "<group>"; };
+		16AC0927276DAA210008C26E /* IllustSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustSelectView.swift; sourceTree = "<group>"; };
 		16BE8C242081E7120041602C /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
-		16BE8C262081E9C70041602C /* TextShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShowViewController.swift; sourceTree = "<group>"; };
-		16BE8C272081E9C70041602C /* TextShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextShowViewController.xib; sourceTree = "<group>"; };
 		16BE8C2B2081F7490041602C /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
-		16BE8C2D20823E070041602C /* IllustSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustSelectViewController.swift; sourceTree = "<group>"; };
-		16BE8C2F20823F470041602C /* IllustCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustCell.swift; sourceTree = "<group>"; };
-		16BE8C3120825C380041602C /* IllustShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustShowViewController.swift; sourceTree = "<group>"; };
-		16BE8C3220825C380041602C /* IllustShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IllustShowViewController.xib; sourceTree = "<group>"; };
 		16BE8C35208264B40041602C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		16DA4F802167CAD000C86180 /* WritingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPresenter.swift; sourceTree = "<group>"; };
 		16DA4F822167CB3C00C86180 /* WritingContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingContract.swift; sourceTree = "<group>"; };
@@ -163,8 +157,7 @@
 		1655B4362349D46F00BBA8D4 /* TextShow */ = {
 			isa = PBXGroup;
 			children = (
-				16BE8C262081E9C70041602C /* TextShowViewController.swift */,
-				16BE8C272081E9C70041602C /* TextShowViewController.xib */,
+				16AC0925276D92B30008C26E /* TextShowView.swift */,
 			);
 			path = TextShow;
 			sourceTree = "<group>";
@@ -172,10 +165,7 @@
 		1655B4372349D7C500BBA8D4 /* IllustSelect */ = {
 			isa = PBXGroup;
 			children = (
-				16BE8C2D20823E070041602C /* IllustSelectViewController.swift */,
-				16BE8C2F20823F470041602C /* IllustCell.swift */,
-				16BE8C3120825C380041602C /* IllustShowViewController.swift */,
-				16BE8C3220825C380041602C /* IllustShowViewController.xib */,
+				16AC0927276DAA210008C26E /* IllustSelectView.swift */,
 			);
 			path = IllustSelect;
 			sourceTree = "<group>";
@@ -202,6 +192,7 @@
 				167872B521849CE400BD2902 /* TemplatesContract.swift */,
 				167872B92184A49700BD2902 /* TemplatesViewController.swift */,
 				1646A9B7218DF8A000A2E301 /* TemplatesPresenter.swift */,
+				1624789E276F735300DD9E29 /* TemplatesView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -467,9 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				163F5FB52174D0A9000D2839 /* assets in Resources */,
-				16BE8C292081E9C70041602C /* TextShowViewController.xib in Resources */,
 				16E073C02372EA4E00B7EF89 /* Colors.xcassets in Resources */,
-				16BE8C3420825C380041602C /* IllustShowViewController.xib in Resources */,
 				1690DA05207F92A90096B23C /* LaunchScreen.storyboard in Resources */,
 				1655B450234A0A7D00BBA8D4 /* Localizable.strings in Resources */,
 				1690DA02207F92A90096B23C /* Assets.xcassets in Resources */,
@@ -578,29 +567,28 @@
 			files = (
 				167872B621849CE400BD2902 /* TemplatesContract.swift in Sources */,
 				1646A9B8218DF8A000A2E301 /* TemplatesPresenter.swift in Sources */,
-				16BE8C282081E9C70041602C /* TextShowViewController.swift in Sources */,
 				165B3DD22340F46B005D8672 /* TextListPresenter.swift in Sources */,
 				1607B75A276CB34B00E1BDB1 /* ShowDrawingView.swift in Sources */,
 				1690D9FD207F92A80096B23C /* ViewController.swift in Sources */,
 				165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */,
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
 				16F71D9C23A546EA00A6A039 /* String+extension.swift in Sources */,
+				1624789F276F735300DD9E29 /* TemplatesView.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
+				16AC0928276DAA210008C26E /* IllustSelectView.swift in Sources */,
 				1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */,
 				167872BA2184A49700BD2902 /* TemplatesViewController.swift in Sources */,
 				160B2C5D23EAC0BE002CD2BB /* CoachMarkController.swift in Sources */,
 				16BE8C2C2081F7490041602C /* TTS.swift in Sources */,
 				16498DA020849D0900332403 /* DrawingViewController.swift in Sources */,
-				16BE8C2E20823E070041602C /* IllustSelectViewController.swift in Sources */,
 				1690D9FB207F92A80096B23C /* AppDelegate.swift in Sources */,
-				16BE8C3320825C380041602C /* IllustShowViewController.swift in Sources */,
+				16AC0926276D92B30008C26E /* TextShowView.swift in Sources */,
 				16DA4F812167CAD100C86180 /* WritingPresenter.swift in Sources */,
 				16F71D9A23A53E7200A6A039 /* TextService.swift in Sources */,
 				163F5FB72174D8EF000D2839 /* Templates.swift in Sources */,
 				16EFE8B12332785F000B6D95 /* TextListViewController.swift in Sources */,
 				16F71D9823A2718900A6A039 /* UITextView+extension.swift in Sources */,
 				16DA4F832167CB3C00C86180 /* WritingContract.swift in Sources */,
-				16BE8C3020823F470041602C /* IllustCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -771,7 +759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -794,7 +782,7 @@
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = GZN22MM2MH;
 				INFOPLIST_FILE = "Kanmoku-Support/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,7 +811,7 @@
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = GZN22MM2MH;
 				INFOPLIST_FILE = "Kanmoku-Support/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

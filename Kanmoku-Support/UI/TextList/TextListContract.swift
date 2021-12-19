@@ -13,7 +13,7 @@ protocol TextListViewProtocol {
     func updateType(_ type: Type)
     func updateOrder(_ order: Order)
     func refreshTextList()
-    func back(_ text: Text)
+    func back(_ text: KSText)
 }
 
 protocol TextListPresenterProtocol: UITableViewDataSource {

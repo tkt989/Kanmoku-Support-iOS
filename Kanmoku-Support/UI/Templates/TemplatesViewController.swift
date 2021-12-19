@@ -56,9 +56,8 @@ class TemplatesViewController: UIViewController, TemplatesViewProtocol {
     }
     
     @IBAction func tapShowText(_ sender: UIButton) {
-        let vc = TextShowViewController()
+        let vc = TextShowView.uiHostingController(text: self.textView.text)
         vc.modalPresentationStyle = .fullScreen
-        vc.text = self.textView.text
         present(vc, animated: true, completion: nil)
     }
     

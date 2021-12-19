@@ -277,55 +277,6 @@
             </objects>
             <point key="canvasLocation" x="336.80000000000001" y="277.51124437781112"/>
         </scene>
-        <!--イラストで伝える-->
-        <scene sceneID="lld-54-h0h">
-            <objects>
-                <collectionViewController title="イラストで伝える" id="6YV-ve-l1I" customClass="IllustSelectViewController" customModule="Kanmoku_Support" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9S1-x3-6uF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zZ5-k2-OjY">
-                            <size key="itemSize" width="179" height="181"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" reuseIdentifier="Cell" id="CQf-AR-ncz" customClass="IllustCell" customModule="Kanmoku_Support" customModuleProvider="target">
-                                <rect key="frame" x="70.5" y="0.0" width="179" height="181"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="179" height="181"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="face2" translatesAutoresizingMaskIntoConstraints="NO" id="dcH-8V-Oq0">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="dcH-8V-Oq0" firstAttribute="top" secondItem="CQf-AR-ncz" secondAttribute="top" id="C9M-Pb-fd7"/>
-                                    <constraint firstAttribute="bottom" secondItem="dcH-8V-Oq0" secondAttribute="bottom" id="Vsa-SD-JJ4"/>
-                                    <constraint firstAttribute="trailing" secondItem="dcH-8V-Oq0" secondAttribute="trailing" id="cUx-yT-pPq"/>
-                                    <constraint firstItem="dcH-8V-Oq0" firstAttribute="leading" secondItem="CQf-AR-ncz" secondAttribute="leading" id="gtX-WF-1wx"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="illustView" destination="dcH-8V-Oq0" id="gnE-yv-e0E"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="6YV-ve-l1I" id="doC-Si-GNJ"/>
-                            <outlet property="delegate" destination="6YV-ve-l1I" id="3Sw-pk-pWS"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="NZA-hr-Gpq"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LYe-qG-U6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1284" y="278.41079460269867"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -457,7 +408,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="6YV-ve-l1I" kind="show" id="dE0-Am-NGa"/>
+                                                            <action selector="clickIllustSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CM0-wB-e9Q"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="イラストで伝える" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vm-p0-PYo">
@@ -789,7 +740,6 @@
         <image name="buttonTemplate" width="512" height="512"/>
         <image name="buttonText" width="512" height="512"/>
         <image name="buttonTextList" width="512" height="512"/>
-        <image name="face2" width="110" height="108"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <namedColor name="MenuTextColor">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

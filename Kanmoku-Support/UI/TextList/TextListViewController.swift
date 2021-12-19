@@ -18,7 +18,7 @@ class TextListViewController: UIViewController, TextListViewProtocol {
     private var presenter: TextListPresenterProtocol!
     private var origin: CGAffineTransform!
     
-    var textList: [Text] = []
+    var textList: [KSText] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,13 +86,13 @@ class TextListViewController: UIViewController, TextListViewProtocol {
         self.tableView.reloadData()
     }
     
-    func back(_ text: Text) {
+    func back(_ text: KSText) {
         self.performSegue(withIdentifier: "editText", sender: text)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! WritingViewController
-        vc.text = sender as? Text
+        vc.text = sender as? KSText
         vc.savable = true
     }
 }

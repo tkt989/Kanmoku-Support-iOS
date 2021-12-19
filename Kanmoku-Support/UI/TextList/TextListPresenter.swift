@@ -11,7 +11,7 @@ import UIKit
 
 class TextListPresenter: NSObject, TextListPresenterProtocol {
     private var view: TextListViewProtocol!
-    private var textList: [Text]!
+    private var textList: [KSText]!
     private var type: Type!
     private var order: Order!
     
@@ -35,7 +35,7 @@ class TextListPresenter: NSObject, TextListPresenterProtocol {
     
     func updateTextList() {
         self.textList = TextService.shared.textList() ?? []
-        self.textList.sort(by: { (a: Text, b: Text) -> Bool in
+        self.textList.sort(by: { (a: KSText, b: KSText) -> Bool in
             if self.type == Type.text {
                 if self.order == Order.asc {
                     return a.content < b.content
