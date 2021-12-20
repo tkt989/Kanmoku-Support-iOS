@@ -16,14 +16,19 @@ struct TextShowView: View {
     
     var body: some View {
         VStack {
-            ScrollView(.vertical, showsIndicators: true) {
-                Text(text)
-                    .font(.system(size: textShowSize))
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            GeometryReader { geometry in
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack {
+                    Text(text)
+                        .font(.system(size: textShowSize))
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                    }
+                    .frame(minHeight: geometry.size.height)
+                }
+                .rotationEffect(.degrees(Settings.shared.isReverseShow ? 180.0 : 0.0))
             }
-            
-                    .rotationEffect(.degrees(Settings.shared.isReverseShow ? 180.0 : 0.0))
             bottomView
         }
     }
