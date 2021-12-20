@@ -14,18 +14,22 @@ struct ShowDrawingView: View {
     @Binding var image: UIImage?
     
     var body: some View {
-        VStack {
-            Image(uiImage: image!)
-                .resizable()
-                .scaledToFit()
-                .rotationEffect(.degrees(Settings.shared.isReverseShow ? 180.0 : 0.0))
-                .frame(maxHeight: .infinity)
-            
-            Button("戻る", action: {
-                dismiss!()
-            })
-                .padding()
-        }
+        Color.white
+            .ignoresSafeArea()
+            .overlay(
+                VStack {
+                    Image(uiImage: image!)
+                        .resizable()
+                        .scaledToFit()
+                        .rotationEffect(.degrees(Settings.shared.isReverseShow ? 180.0 : 0.0))
+                        .frame(maxHeight: .infinity)
+                    
+                    Button("戻る", action: {
+                        dismiss!()
+                    })
+                        .padding()
+                }
+            )
     }
     
     static func uiHostingController(image: UIImage?) -> UIHostingController<ShowDrawingView> {

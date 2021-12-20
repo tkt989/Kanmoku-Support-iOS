@@ -26,21 +26,25 @@ struct IllustSelectView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
-                ForEach(images, id: \.self) { image in
-                    let uiImage = UIImage(named: image)!
-                    Button(action: {
-                        clickImage(uiImage)
-                    }) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .frame(width: 160, height: 160)
-                        
+        Color.white
+            .ignoresSafeArea()
+            .overlay(
+                ScrollView {
+                    LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
+                        ForEach(images, id: \.self) { image in
+                            let uiImage = UIImage(named: image)!
+                            Button(action: {
+                                clickImage(uiImage)
+                            }) {
+                                Image(uiImage: uiImage)
+                                    .resizable()
+                                    .frame(width: 160, height: 160)
+                                
+                            }
+                        }
                     }
                 }
-            }
-        }
+            )
     }
     
     private func clickImage(_ image: UIImage) {
