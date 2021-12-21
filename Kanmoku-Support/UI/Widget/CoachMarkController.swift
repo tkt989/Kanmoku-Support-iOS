@@ -27,12 +27,13 @@ class CoachMarkController: CoachMarksControllerDataSource, CoachMarksControllerD
         self.coachMarksController.dataSource = self
     }
     
-    func start(vc: UIViewController) {
+    func start(vc: UIViewController) -> Bool {
         if Defaults.shared.get(for: Key(self.key)) == true {
-            return
+            return false
         }
         self.coachMarksController.start(in: .window(over: vc))
         Defaults.shared.set(true, for: Key(self.key))
+        return true
     }
     
     func stop() {

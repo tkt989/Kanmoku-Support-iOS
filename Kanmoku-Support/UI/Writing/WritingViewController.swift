@@ -54,7 +54,10 @@ class WritingViewController: UIViewController, WritingViewProtocol, UITextViewDe
         self.setupNavigationItems()
         
         self.coachController.overlay.backgroundColor = UIColor.init(hex: "000000", alpha: 0.3)
-        self.coachMarkController?.start(vc: self)
+        
+        if self.coachMarkController?.start(vc: self) == false {
+            self.textView.becomeFirstResponder()
+        }
     }
     
     override func didReceiveMemoryWarning() {
