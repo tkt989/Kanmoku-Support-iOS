@@ -10,7 +10,6 @@
 		00C448A44B21BD6598B1A329 /* Pods_Kanmoku_SupportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */; };
 		1607B75A276CB34B00E1BDB1 /* ShowDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607B759276CB34B00E1BDB1 /* ShowDrawingView.swift */; };
 		160B2C5D23EAC0BE002CD2BB /* CoachMarkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B2C5C23EAC0BE002CD2BB /* CoachMarkController.swift */; };
-		1624789F276F735300DD9E29 /* TemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1624789E276F735300DD9E29 /* TemplatesView.swift */; };
 		163BDE8C216B135A007C7E07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BDE8B216B135A007C7E07 /* Settings.swift */; };
 		163F5FB52174D0A9000D2839 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 163F5FB42174D0A9000D2839 /* assets */; };
 		163F5FB72174D8EF000D2839 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F5FB62174D8EF000D2839 /* Templates.swift */; };
@@ -69,7 +68,6 @@
 		0401A0DE8B0D08056F2BA85B /* Pods_Kanmoku_SupportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanmoku_SupportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1607B759276CB34B00E1BDB1 /* ShowDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrawingView.swift; sourceTree = "<group>"; };
 		160B2C5C23EAC0BE002CD2BB /* CoachMarkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkController.swift; sourceTree = "<group>"; };
-		1624789E276F735300DD9E29 /* TemplatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesView.swift; sourceTree = "<group>"; };
 		163BDE8B216B135A007C7E07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		163F5FB42174D0A9000D2839 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = "Kanmoku-Support/assets"; sourceTree = "<group>"; };
 		163F5FB62174D8EF000D2839 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 				167872B521849CE400BD2902 /* TemplatesContract.swift */,
 				167872B92184A49700BD2902 /* TemplatesViewController.swift */,
 				1646A9B7218DF8A000A2E301 /* TemplatesPresenter.swift */,
-				1624789E276F735300DD9E29 /* TemplatesView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -573,7 +570,6 @@
 				165B3DD02340F3F7005D8672 /* TextListContract.swift in Sources */,
 				163BDE8C216B135A007C7E07 /* Settings.swift in Sources */,
 				16F71D9C23A546EA00A6A039 /* String+extension.swift in Sources */,
-				1624789F276F735300DD9E29 /* TemplatesView.swift in Sources */,
 				16BE8C252081E7120041602C /* WritingViewController.swift in Sources */,
 				16AC0928276DAA210008C26E /* IllustSelectView.swift in Sources */,
 				1655B44B234A097A00BBA8D4 /* Extension.swift in Sources */,
@@ -778,7 +774,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = GZN22MM2MH;
 				INFOPLIST_FILE = "Kanmoku-Support/Info.plist";
@@ -787,7 +783,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.7;
+				MARKETING_VERSION = 1.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-Support";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -807,7 +803,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = GZN22MM2MH;
 				INFOPLIST_FILE = "Kanmoku-Support/Info.plist";
@@ -816,7 +812,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.7;
+				MARKETING_VERSION = 1.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.tkt989.Kanmoku-Support";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
